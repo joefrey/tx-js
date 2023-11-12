@@ -462,8 +462,6 @@
       strokeDashoffset: path3.getTotalLength(),
       strokeDasharray: path3.getTotalLength(),
     });
-
-    console.log("resetted");
   }
 
   function solutionsItemsHover() {
