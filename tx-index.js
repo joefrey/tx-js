@@ -95,7 +95,7 @@
         ease: "power4.inOut",
         force3D: true,
         onComplete: () => {
-          pillSpaceshipFloating();
+          pillSpaceshipFloating(pillSpaceship);
         },
       },
       "-=.5"
@@ -508,7 +508,7 @@
   }
   solutionsItemsHover();
 
-  var pillSpaceshipFloating = function () {
+  var pillSpaceshipFloating = function (el) {
     console.log("nice");
     const randomX = random(10, 20);
     const randomY = random(20, 30);
@@ -517,9 +517,9 @@
     const randomTime2 = random(5, 10);
     const randomAngle = random(8, 12);
 
-    moveX(pillSpaceship, 1);
-    moveY(pillSpaceship, -1);
-    rotate(pillSpaceship, 1);
+    moveX(el, 1);
+    moveY(el, -1);
+    rotate(el, 0.3);
 
     function rotate(target, direction) {
       TweenLite.to(target, randomTime2(), {
