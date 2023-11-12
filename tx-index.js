@@ -509,6 +509,7 @@
   solutionsItemsHover();
 
   var pillSpaceshipFloating = function () {
+    console.log("nice");
     const randomX = random(10, 20);
     const randomY = random(20, 30);
     const randomDelay = random(0, 1);
