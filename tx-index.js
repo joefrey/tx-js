@@ -508,7 +508,7 @@
   }
   solutionsItemsHover();
 
-  function pillSpaceshipFloating() {
+  var pillSpaceshipFloating = function () {
     const randomX = random(10, 20);
     const randomY = random(20, 30);
     const randomDelay = random(0, 1);
@@ -523,7 +523,6 @@
     function rotate(target, direction) {
       TweenLite.to(target, randomTime2(), {
         rotation: randomAngle(direction),
-        // delay: randomDelay(),
         ease: Sine.easeInOut,
         onComplete: rotate,
         onCompleteParams: [target, direction * -1],
@@ -552,5 +551,5 @@
       const delta = max - min;
       return (direction = 1) => (min + delta * Math.random()) * direction;
     }
-  }
+  };
 })();
