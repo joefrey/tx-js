@@ -108,12 +108,12 @@
           TweenLite.set(pillSpaceship, {
             x: randomX(-1),
             y: randomX(1),
-            rotation: randomAngle(-1),
+            rotation: randomAngle(0),
           });
 
           moveX(pillSpaceship, 1);
           moveY(pillSpaceship, -1);
-          rotate(pillSpaceship, 1);
+          rotate(pillSpaceship, 0);
 
           function rotate(target, direction) {
             TweenLite.to(target, randomTime2(), {
