@@ -25,7 +25,7 @@
   });
 
   function heroAnimate() {
-    const astronaut = document.querySelector(".tx2-astronaut__with_cell__img");
+    const astronaut = document.querySelector(".tx2-astronaut__with_cell");
     const logo = document.querySelector(".tx2-connect__logo");
 
     gsap.to(
@@ -76,7 +76,7 @@
       y: 80,
       skewY: 10,
     });
-    gsap.set(".tx2-astronaut__with_cell__img", {
+    gsap.set(".tx2-astronaut__with_cell", {
       opacity: 0,
       xPercent: -15,
       yPercent: 15,
