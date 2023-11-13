@@ -156,7 +156,7 @@
               combustion_2,
               {
                 duration: 1000,
-                delay: 0.9,
+                delay: 2,
                 ease: "power4.inOut",
                 y: 100,
               },
@@ -166,7 +166,7 @@
               combustion_3,
               {
                 duration: 1000,
-                delay: 0.9,
+                delay: 4,
                 ease: "power4.inOut",
                 y: 100,
               },
