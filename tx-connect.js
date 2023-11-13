@@ -51,10 +51,19 @@
     const combustion_1 = document.querySelector(".tx2-1st_rocket_combustion");
     const combustion_2 = document.querySelector(".tx2-2nd_rocket_combustion");
     const combustion_3 = document.querySelector(".tx2-3rd_rocket_combustion");
+    const planet = document.querySelector(".tx2-connect__planet");
+
     const rocket_launch = document.querySelector(
       ".tx2-rocket__launch_combustion"
     );
     const logo = document.querySelector(".tx2-connect__logo");
+
+    gsap.to(planet, 1.8, {
+      xPercent: -45,
+      yPercent: 45,
+      ease: "power4.inOut",
+      force3D: true,
+    });
 
     gsap.fromTo(
       logo,
@@ -142,8 +151,11 @@
                 markers: false,
               },
             })
-            .to(
+            .fromTo(
               combustion_1,
+              {
+                yPercent: 0,
+              },
               {
                 duration: 4000,
                 delay: 0.9,
@@ -163,13 +175,16 @@
                 markers: false,
               },
             })
-            .to(
+            .fromTo(
               combustion_2,
+              {
+                yPercent: 0,
+              },
               {
                 duration: 5000,
                 delay: 2,
                 ease: "power4.inOut",
-                yPercent: 10,
+                yPercent: 5,
               },
               "+=4"
             );
@@ -184,13 +199,16 @@
                 markers: false,
               },
             })
-            .to(
+            .fromTo(
               combustion_3,
               {
-                duration: 6000,
+                yPercent: 0,
+              },
+              {
+                duration: 3000,
                 delay: 3,
                 ease: "power4.inOut",
-                yPercent: 10,
+                yPercent: 5,
               },
               "+=6"
             );
@@ -217,6 +235,10 @@
     gsap.set(".gsap-line span > span", {
       y: 80,
       skewY: 10,
+    });
+    gsap.set(".tx2-connect__planet", {
+      xPercent: 100,
+      yPercent: -100,
     });
   }
 
