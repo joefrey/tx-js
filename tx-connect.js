@@ -2,6 +2,7 @@
   swiperConnectTestimonial();
 
   var swiperConnectTestimonial = function () {
+    console.log("connect testimonial");
     const swiper = new Swiper(".swiperTestimonial", {
       // Optional parameters
       //direction: 'vertical',
