@@ -58,13 +58,18 @@
     );
     const logo = document.querySelector(".tx2-connect__logo");
 
-    gsap.to(planet, 1.8, {
-      xPercent: 0,
-      yPercent: 0,
-      opacity: 1,
-      ease: "power4.inOut",
-      force3D: true,
-    });
+    gsap.to(
+      planet,
+      1.8,
+      {
+        xPercent: 0,
+        yPercent: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+        force3D: true,
+      },
+      "+=3"
+    );
 
     gsap.fromTo(
       logo,
@@ -239,8 +244,8 @@
     });
     gsap.set(".tx2-connect__planet", {
       opacity: 0,
-      xPercent: 45,
-      yPercent: -45,
+      xPercent: 15,
+      yPercent: -15,
     });
   }
 
