@@ -51,7 +51,7 @@
     const combustion_1 = document.querySelector(".tx2-1st_rocket_combustion");
     const combustion_2 = document.querySelector(".tx2-2nd_rocket_combustion");
     const combustion_3 = document.querySelector(".tx2-3rd_rocket_combustion");
-    const rocket_launch = docment.querySelector(
+    const rocket_launch = document.querySelector(
       ".tx2-rocket__launch_combustion"
     );
     const logo = document.querySelector(".tx2-connect__logo");
