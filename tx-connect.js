@@ -159,7 +159,7 @@
 
   function swiperConnectTestimonial() {
     var swiper = new Swiper(".swipertestimonial", {
-      loop: false,
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 700,
