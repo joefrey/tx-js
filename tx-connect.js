@@ -56,13 +56,13 @@
       combustion_1,
       3,
       {
-        y: 200,
+        yPercent: 200,
         opacity: 1,
       },
       {
         ease: "power4.inOut",
         opacity: 1,
-        y: 0,
+        yPercent: 0,
         force3D: true,
       },
       "-=2"
@@ -71,13 +71,13 @@
       combustion_2,
       3,
       {
-        y: 200,
+        yPercent: 100,
         opacity: 1,
       },
       {
         ease: "power4.inOut",
         opacity: 1,
-        y: 0,
+        yPercent: 0,
         force3D: true,
       },
       "-=1"
@@ -86,7 +86,7 @@
       combustion_3,
       3,
       {
-        y: 200,
+        yPercent: 100,
         opacity: 1,
       },
       {
