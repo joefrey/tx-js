@@ -19,6 +19,8 @@
 
         if (sectionID === "hero") {
           heroAnimate();
+        } else if (sectionID === "features") {
+          featuresAnimate();
         }
       },
     });
@@ -61,6 +63,22 @@
     );
   }
 
+  function featuresAnimate() {
+    const featuresItems = document.querySelectorAll(
+      ".tx2-advance__features_item"
+    );
+
+    gsap.to(featuresItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 0.5,
+      opacity: 1,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+  }
+
   function titleAnimate(chars) {
     const tl = gsap.timeline();
     tl.to(chars, 1.8, {
@@ -83,6 +101,11 @@
       opacity: 0,
       xPercent: 15,
       yPercent: 15,
+    });
+
+    gsap.set(".tx2-advance__features_item", {
+      y: 100,
+      opacity: 0,
     });
   }
 
