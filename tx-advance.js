@@ -105,28 +105,6 @@
       });
     });
 
-    // gsap.utils.toArray("#counterTwo").forEach(function (el) {
-    //   var target = { val: 0 };
-    //   gsap.to(target, {
-    //     val: el.getAttribute("data-number"),
-    //     duration: 3,
-    //     onUpdate: function () {
-    //       el.innerText = numberWithCommas(target.val.toFixed(0));
-    //     },
-    //   });
-    // });
-
-    // gsap.utils.toArray("#counterThree").forEach(function (el) {
-    //   var target = { val: 0 };
-    //   gsap.to(target, {
-    //     val: el.getAttribute("data-number"),
-    //     duration: 3,
-    //     onUpdate: function () {
-    //       el.innerText = numberWithCommas(target.val.toFixed(0));
-    //     },
-    //   });
-    // });
-
     function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
