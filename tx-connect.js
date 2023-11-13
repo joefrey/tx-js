@@ -159,17 +159,18 @@
 
   function swiperConnectTestimonial() {
     var swiper = new Swiper(".swipertestimonial", {
-      loop: true,
+      loop: false,
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 700,
       autoHeight: true,
-      autoplay: {
-        delay: 5000,
-      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+
+        // nextEl: ".custom-swiper-button-next",
+        // prevEl: ".custom-swiper-button-prev",
+        // disabledClass: "custom-swiper-button-disabled",
       },
       pagination: {
         el: ".swiper-pagination",
