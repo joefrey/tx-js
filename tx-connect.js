@@ -131,7 +131,7 @@
         yPercent: 0,
         force3D: true,
       },
-      "+=2"
+      "+=1"
     );
   }
 
