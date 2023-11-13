@@ -158,10 +158,15 @@
   swiperConnectTestimonial();
 
   function swiperConnectTestimonial() {
-    var swiper = new Swiper(".swiper", {
+    var swiper = new Swiper(".swipertestimonial", {
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 700,
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
