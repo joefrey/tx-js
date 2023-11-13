@@ -51,6 +51,26 @@
     const combustion_1 = document.querySelector(".tx2-1st_rocket_combustion");
     const combustion_2 = document.querySelector(".tx2-2nd_rocket_combustion");
     const combustion_3 = document.querySelector(".tx2-3rd_rocket_combustion");
+    const rocket_launch = docment.querySelector(
+      ".tx2-rocket__launch_combustion"
+    );
+    const logo = document.querySelector(".tx2-connect__logo");
+
+    gsap.fromTo(
+      logo,
+      1.5,
+      {
+        yPercent: 30,
+        opacity: 1,
+      },
+      {
+        ease: "power4.inOut",
+        opacity: 1,
+        yPercent: 0,
+        force3D: true,
+      },
+      "-=2"
+    );
 
     gsap.fromTo(
       combustion_1,
@@ -92,7 +112,23 @@
       {
         ease: "power4.inOut",
         opacity: 1,
-        y: 0,
+        yPercent: 0,
+        force3D: true,
+      },
+      "-=0"
+    );
+
+    gsap.fromTo(
+      rocket_launch,
+      3,
+      {
+        yPercent: 200,
+        opacity: 1,
+      },
+      {
+        ease: "power4.inOut",
+        opacity: 1,
+        yPercent: 0,
         force3D: true,
       },
       "-=0"
