@@ -58,7 +58,7 @@
 
     gsap.fromTo(
       logo,
-      1.5,
+      3,
       {
         yPercent: 50,
         opacity: 0,
@@ -74,7 +74,7 @@
 
     gsap.fromTo(
       combustion_1,
-      2,
+      3,
       {
         yPercent: 200,
         opacity: 1,
@@ -85,7 +85,7 @@
         yPercent: 0,
         force3D: true,
       },
-      "-=2"
+      "-=3"
     );
     gsap.fromTo(
       combustion_2,
@@ -100,7 +100,7 @@
         yPercent: 0,
         force3D: true,
       },
-      "-=1"
+      "-=2"
     );
     gsap.fromTo(
       combustion_3,
@@ -115,7 +115,7 @@
         yPercent: 0,
         force3D: true,
       },
-      "-=0"
+      "-=1"
     );
 
     gsap.fromTo(
@@ -130,8 +130,51 @@
         opacity: 1,
         yPercent: 0,
         force3D: true,
+        onComplete: () => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: combustion_1,
+                start: "top 90%",
+                end: "+=160%",
+                scrub: true,
+                once: false,
+                markers: false,
+              },
+            })
+            .to(
+              combustion_1,
+              {
+                duration: 1000,
+                delay: 0.9,
+                ease: "power4.inOut",
+                y: 100,
+              },
+              "+=4"
+            )
+            .to(
+              combustion_2,
+              {
+                duration: 1000,
+                delay: 0.9,
+                ease: "power4.inOut",
+                y: 100,
+              },
+              "+=5"
+            )
+            .to(
+              combustion_3,
+              {
+                duration: 1000,
+                delay: 0.9,
+                ease: "power4.inOut",
+                y: 100,
+              },
+              "+=6"
+            );
+        },
       },
-      "-=0"
+      "-=1"
     );
   }
 
