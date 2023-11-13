@@ -96,7 +96,7 @@
     });
     gsap.utils.toArray("#counterOne").forEach(function (el) {
       var target = { val: 0 };
-      tl.to(target, {
+      gsap.to(target, {
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
@@ -107,7 +107,7 @@
 
     gsap.utils.toArray("#counterTwo").forEach(function (el) {
       var target = { val: 0 };
-      tl.to(target, {
+      gsap.to(target, {
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
@@ -118,7 +118,7 @@
 
     gsap.utils.toArray("#counterThree").forEach(function (el) {
       var target = { val: 0 };
-      tl.to(target, {
+      gsap.to(target, {
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
