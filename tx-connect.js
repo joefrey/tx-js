@@ -120,7 +120,7 @@
 
     gsap.fromTo(
       rocket_launch,
-      3,
+      5,
       {
         yPercent: 200,
         opacity: 1,
@@ -131,7 +131,7 @@
         yPercent: 0,
         force3D: true,
       },
-      "-=2"
+      "-=0"
     );
   }
 
