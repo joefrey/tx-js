@@ -94,18 +94,16 @@
         amount: 0.5,
       },
     });
-    gsap.utils
-      .toArray(".tx2-connect__success_item_figure")
-      .forEach(function (el) {
-        var target = { val: 0 };
-        gsap.to(target, {
-          val: el.getAttribute("data-number"),
-          duration: 3,
-          onUpdate: function () {
-            el.innerText = numberWithCommas(target.val.toFixed(0));
-          },
-        });
+    gsap.utils.toArray(".number_counter_item").forEach(function (el) {
+      var target = { val: 0 };
+      gsap.to(target, {
+        val: el.getAttribute("data-number"),
+        duration: 3,
+        onUpdate: function () {
+          el.innerText = numberWithCommas(target.val.toFixed(0));
+        },
       });
+    });
 
     // gsap.utils.toArray("#counterTwo").forEach(function (el) {
     //   var target = { val: 0 };
