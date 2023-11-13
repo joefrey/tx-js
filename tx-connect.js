@@ -45,8 +45,6 @@
     });
   });
 
-  swiperConnectTestimonial();
-
   function titleAnimate(chars) {
     const tl = gsap.timeline();
     tl.to(chars, 1.8, {
@@ -59,6 +57,15 @@
       },
     });
   }
+
+  function resetElements() {
+    gsap.set(".gsap-line span > span", {
+      y: 80,
+      skewY: 10,
+    });
+  }
+
+  swiperConnectTestimonial();
 
   function swiperConnectTestimonial() {
     var swiper = new Swiper(".swiperTestimonial", {
