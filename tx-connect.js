@@ -145,10 +145,10 @@
             .to(
               combustion_1,
               {
-                duration: 1000,
+                duration: 4000,
                 delay: 0.9,
                 ease: "power4.inOut",
-                yPercent: 100,
+                yPercent: 10,
               },
               "+=4"
             );
@@ -166,10 +166,10 @@
             .to(
               combustion_2,
               {
-                duration: 1000,
+                duration: 5000,
                 delay: 2,
                 ease: "power4.inOut",
-                yPercent: 100,
+                yPercent: 10,
               },
               "+=4"
             );
@@ -187,10 +187,10 @@
             .to(
               combustion_3,
               {
-                duration: 1000,
+                duration: 6000,
                 delay: 3,
                 ease: "power4.inOut",
-                yPercent: 100,
+                yPercent: 10,
               },
               "+=6"
             );
