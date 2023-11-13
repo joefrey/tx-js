@@ -57,7 +57,7 @@
       3,
       {
         y: 200,
-        opacity: 0,
+        opacity: 1,
       },
       {
         ease: "power4.inOut",
@@ -72,7 +72,7 @@
       3,
       {
         y: 200,
-        opacity: 0,
+        opacity: 1,
       },
       {
         ease: "power4.inOut",
@@ -80,14 +80,14 @@
         y: 0,
         force3D: true,
       },
-      "-=3"
+      "-=1"
     );
     gsap.fromTo(
       combustion_3,
       3,
       {
         y: 200,
-        opacity: 0,
+        opacity: 1,
       },
       {
         ease: "power4.inOut",
@@ -95,7 +95,7 @@
         y: 0,
         force3D: true,
       },
-      "-=4"
+      "-=0"
     );
   }
 
