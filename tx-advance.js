@@ -21,6 +21,8 @@
           heroAnimate();
         } else if (sectionID === "features") {
           featuresAnimate();
+        } else if (sectionID === "our-success") {
+          successAnimate();
         }
       },
     });
@@ -79,6 +81,57 @@
     });
   }
 
+  function successAnimate() {
+    const successItems = document.querySelectorAll(
+      ".tx2-connect__success_item"
+    );
+    gsap.to(successItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+    gsap.utils.toArray("#counterOne").forEach(function (el) {
+      var target = { val: 0 };
+      tl.to(target, {
+        val: el.getAttribute("data-number"),
+        duration: 3,
+        onUpdate: function () {
+          el.innerText = numberWithCommas(target.val.toFixed(1));
+        },
+      });
+    });
+
+    gsap.utils.toArray("#counterTwo").forEach(function (el) {
+      var target = { val: 0 };
+      tl.to(target, {
+        val: el.getAttribute("data-number"),
+        duration: 3,
+        onUpdate: function () {
+          el.innerText = numberWithCommas(target.val.toFixed(1));
+        },
+      });
+    });
+
+    gsap.utils.toArray("#counterThree").forEach(function (el) {
+      var target = { val: 0 };
+      tl.to(target, {
+        val: el.getAttribute("data-number"),
+        duration: 3,
+        onUpdate: function () {
+          el.innerText = numberWithCommas(target.val.toFixed(1));
+        },
+      });
+    });
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  }
+
   function titleAnimate(chars) {
     const tl = gsap.timeline();
     tl.to(chars, 1.8, {
@@ -103,10 +156,14 @@
       yPercent: 15,
     });
 
-    gsap.set(".tx2-advance__features_item", {
+    gsap.set(".tx2-advance__features_item, .tx2-connect__success_item", {
       y: 100,
       opacity: 0,
     });
+    // gsap.set(".tx2-connect__success_item", {
+    //   y: 100,
+    //   opacity: 0,
+    // });
   }
 
   swiperConnectTestimonial();
