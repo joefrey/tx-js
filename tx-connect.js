@@ -158,7 +158,7 @@
   swiperConnectTestimonial();
 
   function swiperConnectTestimonial() {
-    var swiper = new Swiper(".swiperTestimonial", {
+    var swiper = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 700,
