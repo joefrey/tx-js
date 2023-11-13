@@ -165,12 +165,9 @@
       speed: 700,
       autoHeight: true,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-
-        // nextEl: ".custom-swiper-button-next",
-        // prevEl: ".custom-swiper-button-prev",
-        // disabledClass: "custom-swiper-button-disabled",
+        nextEl: ".custom-swiper-button-next",
+        prevEl: ".custom-swiper-button-prev",
+        disabledClass: "custom-swiper-button-disabled",
       },
       pagination: {
         el: ".swiper-pagination",
