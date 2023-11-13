@@ -120,7 +120,7 @@
 
     gsap.fromTo(
       rocket_launch,
-      5,
+      3,
       {
         yPercent: 200,
         opacity: 1,
