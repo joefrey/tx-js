@@ -45,6 +45,58 @@
     });
   });
 
+  function heroAnimate() {
+    const combustion_1 = document.querySelector(".tx2-1st_rocket_combustion");
+    const combustion_2 = document.querySelector(".tx2-2nd_rocket_combustion");
+    const combustion_3 = document.querySelector(".tx2-3rd_rocket_combustion");
+
+    gsap.fromTo(
+      combustion_1,
+      3,
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        ease: "power4.inOut",
+        opacity: 1,
+        y: 0,
+        force3D: true,
+      },
+      "-=2"
+    );
+    gsap.fromTo(
+      combustion_2,
+      3,
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        ease: "power4.inOut",
+        opacity: 1,
+        y: 0,
+        force3D: true,
+      },
+      "-=3"
+    );
+    gsap.fromTo(
+      combustion_3,
+      3,
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        ease: "power4.inOut",
+        opacity: 1,
+        y: 0,
+        force3D: true,
+      },
+      "-=4"
+    );
+  }
+
   function titleAnimate(chars) {
     const tl = gsap.timeline();
     tl.to(chars, 1.8, {
