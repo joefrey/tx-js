@@ -78,8 +78,8 @@
     });
     gsap.set(".tx2-astronaut__with_cell", {
       opacity: 0,
-      xPercent: 25,
-      yPercent: -25,
+      xPercent: 15,
+      yPercent: 15,
     });
   }
 
