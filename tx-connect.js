@@ -61,6 +61,7 @@
     gsap.to(planet, 1.8, {
       xPercent: -45,
       yPercent: 45,
+      opacity: 1,
       ease: "power4.inOut",
       force3D: true,
     });
@@ -237,6 +238,7 @@
       skewY: 10,
     });
     gsap.set(".tx2-connect__planet", {
+      opacity: 0,
       xPercent: 100,
       yPercent: -100,
     });
