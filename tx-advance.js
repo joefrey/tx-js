@@ -100,7 +100,7 @@
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
-          el.innerText = numberWithCommas(target.val.toFixed(1));
+          el.innerText = numberWithCommas(target.val.toFixed(0));
         },
       });
     });
@@ -111,7 +111,7 @@
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
-          el.innerText = numberWithCommas(target.val.toFixed(1));
+          el.innerText = numberWithCommas(target.val.toFixed(0));
         },
       });
     });
@@ -122,7 +122,7 @@
         val: el.getAttribute("data-number"),
         duration: 3,
         onUpdate: function () {
-          el.innerText = numberWithCommas(target.val.toFixed(1));
+          el.innerText = numberWithCommas(target.val.toFixed(0));
         },
       });
     });
