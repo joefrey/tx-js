@@ -59,8 +59,8 @@
     const logo = document.querySelector(".tx2-connect__logo");
 
     gsap.to(planet, 1.8, {
-      xPercent: -45,
-      yPercent: 45,
+      xPercent: 0,
+      yPercent: 0,
       opacity: 1,
       ease: "power4.inOut",
       force3D: true,
@@ -239,8 +239,8 @@
     });
     gsap.set(".tx2-connect__planet", {
       opacity: 0,
-      xPercent: 100,
-      yPercent: -100,
+      xPercent: 45,
+      yPercent: -45,
     });
   }
 
