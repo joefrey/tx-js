@@ -71,10 +71,10 @@
     gsap.to(featuresItems, 1.8, {
       ease: "power4.out",
       y: 0,
-      delay: 0.5,
+      delay: 1,
       opacity: 1,
       stagger: {
-        amount: 0.3,
+        amount: 0.5,
       },
     });
   }
