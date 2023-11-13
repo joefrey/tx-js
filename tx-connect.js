@@ -135,7 +135,7 @@
             .timeline({
               scrollTrigger: {
                 trigger: combustion_1,
-                start: "top 90%",
+                start: "top 0%",
                 end: "+=160%",
                 scrub: true,
                 once: false,
@@ -156,7 +156,7 @@
             .timeline({
               scrollTrigger: {
                 trigger: combustion_2,
-                start: "top 90%",
+                start: "top 0%",
                 end: "+=160%",
                 scrub: true,
                 once: false,
@@ -177,7 +177,7 @@
             .timeline({
               scrollTrigger: {
                 trigger: combustion_3,
-                start: "top 90%",
+                start: "top 0%",
                 end: "+=160%",
                 scrub: true,
                 once: false,
