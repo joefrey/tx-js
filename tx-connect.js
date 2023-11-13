@@ -60,8 +60,8 @@
       logo,
       1.5,
       {
-        yPercent: 30,
-        opacity: 1,
+        yPercent: 50,
+        opacity: 0,
       },
       {
         ease: "power4.inOut",
