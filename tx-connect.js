@@ -17,9 +17,11 @@
         let sectionID = elem.id;
         titleAnimate(elem.querySelectorAll(".gsap-line span > span"));
 
-        // if (sectionID === "hero") {
-        //   heroAnimate();
-        // } else if (sectionID === "stats") {
+        if (sectionID === "hero") {
+          heroAnimate();
+        }
+
+        //else if(sectionID === "stats") {
         //   statsAnimate();
         // } else if (sectionID === "solutions") {
         //   solutionsAnimate();
