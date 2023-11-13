@@ -148,7 +148,7 @@
                 duration: 1000,
                 delay: 0.9,
                 ease: "power4.inOut",
-                y: 100,
+                yPercent: 100,
               },
               "+=4"
             );
@@ -169,7 +169,7 @@
                 duration: 1000,
                 delay: 2,
                 ease: "power4.inOut",
-                y: 100,
+                yPercent: 100,
               },
               "+=4"
             );
@@ -188,9 +188,9 @@
               combustion_3,
               {
                 duration: 1000,
-                delay: 4,
+                delay: 3,
                 ease: "power4.inOut",
-                y: 100,
+                yPercent: 100,
               },
               "+=6"
             );
