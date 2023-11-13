@@ -151,7 +151,18 @@
                 y: 100,
               },
               "+=4"
-            )
+            );
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: combustion_2,
+                start: "top 90%",
+                end: "+=160%",
+                scrub: true,
+                once: false,
+                markers: false,
+              },
+            })
             .to(
               combustion_2,
               {
@@ -160,8 +171,19 @@
                 ease: "power4.inOut",
                 y: 100,
               },
-              "+=5"
-            )
+              "+=4"
+            );
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: combustion_3,
+                start: "top 90%",
+                end: "+=160%",
+                scrub: true,
+                once: false,
+                markers: false,
+              },
+            })
             .to(
               combustion_3,
               {
