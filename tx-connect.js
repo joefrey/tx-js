@@ -1,7 +1,7 @@
 (function () {
   swiperConnectTestimonial();
 
-  var swiperConnectTestimonial = function () {
+  function swiperConnectTestimonial() {
     console.log("connect testimonial");
     const swiper = new Swiper(".swiperTestimonial", {
       // Optional parameters
@@ -19,5 +19,5 @@
         prevEl: ".swiper-button-prev",
       },
     });
-  };
+  }
 })();
