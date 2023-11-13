@@ -74,7 +74,7 @@
 
     gsap.fromTo(
       combustion_1,
-      3,
+      2,
       {
         yPercent: 200,
         opacity: 1,
