@@ -224,24 +224,26 @@
 
     const path = document.querySelectorAll("#svg-lines-features .path");
 
-    const svgLinesTL = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: path,
-          start: "top 90%",
-          end: "+=170%",
-          scrub: true,
-          once: false,
-          pin: false,
-          markers: false,
-        },
-      })
-      .to(path, 1000, {
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=170%",
+        scrub: true,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    path.forEach((el) => {
+      svgLinesTL.to(el, 1000, {
         strokeDashoffset: 0,
         delay: 1,
-        strokeDasharray: path.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
         ease: "power4.inOut",
       });
+    });
   }
 
   function successAnimate() {
