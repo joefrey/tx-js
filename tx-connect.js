@@ -239,7 +239,7 @@
     path.forEach((el) => {
       svgLinesTL.to(
         el,
-        5000,
+        10000,
         {
           strokeDashoffset: 0,
           delay: 2,
