@@ -25,7 +25,7 @@
           successAnimate();
         } else if (sectionID === "testimonials") {
           testimonialsAnimate();
-        } else if (sectionID === "testimonials") {
+        } else if (sectionID === "clients") {
           clientsAnimate();
         } else if (sectionID === "demo") {
           demoAnimate();
