@@ -239,7 +239,7 @@
       .to(path, 1000, {
         strokeDashoffset: 0,
         delay: 1,
-        strokeDasharray: path1.getTotalLength(),
+        strokeDasharray: path.getTotalLength(),
         ease: "power4.inOut",
       });
   }
@@ -393,8 +393,8 @@
 
     const path = document.querySelectorAll("#svg-lines-features .path");
     gsap.set(path, {
-      strokeDashoffset: path1.getTotalLength(),
-      strokeDasharray: path1.getTotalLength(),
+      strokeDashoffset: path.getTotalLength(),
+      strokeDasharray: path.getTotalLength(),
     });
   }
 
