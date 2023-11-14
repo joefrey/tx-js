@@ -228,7 +228,7 @@
       scrollTrigger: {
         trigger: path,
         start: "top 90%",
-        end: "+=170%",
+        end: "+=570%",
         scrub: true,
         once: false,
         pin: false,
@@ -239,7 +239,7 @@
     path.forEach((el) => {
       svgLinesTL.to(
         el,
-        10000,
+        1000,
         {
           strokeDashoffset: 0,
           delay: 2,
