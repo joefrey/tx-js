@@ -146,6 +146,7 @@
         yPercent: 0,
         force3D: true,
         onComplete: () => {
+          pillSpaceshipFloating(rocket_launch);
           gsap
             .timeline({
               scrollTrigger: {
@@ -224,6 +225,43 @@
     );
   }
 
+  function showAnimate(el, str) {
+    gsap.fromTo(
+      el,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+      },
+      str
+    );
+  }
+  function showStaggerAnimate(els, staggerAmount = 0.5) {
+    gsap.fromTo(
+      els,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: staggerAmount,
+        },
+      }
+    );
+  }
+
   function titleAnimate(chars) {
     const tl = gsap.timeline();
     tl.to(chars, 1.8, {
@@ -274,4 +312,49 @@
       },
     });
   }
+
+  var pillSpaceshipFloating = function (el) {
+    const randomX = random(10, 20);
+    const randomY = random(20, 30);
+    const randomDelay = random(0, 1);
+    const randomTime = random(3, 5);
+    const randomTime2 = random(5, 10);
+    const randomAngle = random(8, 12);
+
+    moveX(el, 0.3);
+    moveY(el, -0.3);
+    rotate(el, 0.3);
+
+    function rotate(target, direction) {
+      TweenLite.to(target, randomTime2(), {
+        rotation: randomAngle(direction),
+        ease: Sine.easeInOut,
+        onComplete: rotate,
+        onCompleteParams: [target, direction * -1],
+      });
+    }
+
+    function moveX(target, direction) {
+      TweenLite.to(target, randomTime(), {
+        x: randomX(direction),
+        ease: Sine.easeInOut,
+        onComplete: moveX,
+        onCompleteParams: [target, direction * -1],
+      });
+    }
+
+    function moveY(target, direction) {
+      TweenLite.to(target, randomTime(), {
+        y: randomY(direction),
+        ease: Sine.easeInOut,
+        onComplete: moveY,
+        onCompleteParams: [target, direction * -1],
+      });
+    }
+
+    function random(min, max) {
+      const delta = max - min;
+      return (direction = 1) => (min + delta * Math.random()) * direction;
+    }
+  };
 })();
