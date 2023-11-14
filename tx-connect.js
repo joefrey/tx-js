@@ -227,15 +227,23 @@
     const successItems = document.querySelectorAll(
       ".tx2-connect__success_item"
     );
-    gsap.to(successItems, 1.8, {
-      ease: "power4.out",
-      y: 0,
-      delay: 1,
-      opacity: 1,
-      stagger: {
-        amount: 0.5,
+    gsap.fromTo(
+      successItems,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
       },
-    });
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      }
+    );
     gsap.utils.toArray(".number_counter_item").forEach(function (el) {
       var target = { val: 0 };
       gsap.to(target, {
