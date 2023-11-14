@@ -275,7 +275,9 @@
     const randomAngle = random(8, 12);
 
     moveX(el, 0.5);
+    moveX(el, -0.5);
     moveY(el, -0.5);
+    moveY(el, 0.5);
     rotate(el, 0.3);
 
     function rotate(target, direction) {
