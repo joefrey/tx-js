@@ -19,30 +19,9 @@
 
         if (sectionID === "hero") {
           heroAnimate();
+        } else if (sectionID === "features") {
+          featureAnimate();
         }
-
-        //else if(sectionID === "stats") {
-        //   statsAnimate();
-        // } else if (sectionID === "solutions") {
-        //   solutionsAnimate();
-        // } else if (sectionID === "clients") {
-        //   const clientsInner = document.querySelector(".tx2-clients-inner");
-
-        //   gsap.to(
-        //     clientsInner,
-        //     1,
-        //     {
-        //       y: 0,
-        //       opacity: 1,
-        //       ease: "power4.inOut",
-        //       force3D: true,
-        //     },
-        //     "-=6"
-        //   );
-        //   clientsAnimate();
-        // } else if (sectionID === "leadership") {
-        //   leadershipAnimate();
-        // }
       },
     });
   });
@@ -223,6 +202,15 @@
       },
       "-=1"
     );
+  }
+
+  function featureAnimate() {
+    const p = document.querySelector(".tx2-connect-features__desc_p");
+    const featureItems = document.querySelectorAll(
+      ".tx2-connect__features_item"
+    );
+    showAnimate(p);
+    showStaggerAnimate(featureItems);
   }
 
   function showAnimate(el, str) {
