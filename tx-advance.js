@@ -165,7 +165,7 @@
   }
 
   function whatsnewAnimate() {
-    const newsItems = document.querySelectorAll(".tx2-connect__clients_item");
+    const newsItems = document.querySelectorAll(".tx2-blog_item");
     showStaggerAnimate(newsItems);
   }
 
