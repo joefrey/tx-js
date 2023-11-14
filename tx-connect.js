@@ -21,6 +21,16 @@
           heroAnimate();
         } else if (sectionID === "features") {
           featureAnimate();
+        } else if (sectionID === "success") {
+          successAnimate();
+        } else if (sectionID === "testimonials") {
+          testimonialsAnimate();
+        } else if (sectionID === "clients") {
+          clientsAnimate();
+        } else if (sectionID === "demo") {
+          demoAnimate();
+        } else if (sectionID === "whatsnew") {
+          whatsnewAnimate();
         }
       },
     });
@@ -211,6 +221,84 @@
     );
     showAnimate(p);
     showStaggerAnimate(featureItems);
+  }
+
+  function successAnimate() {
+    const successItems = document.querySelectorAll(
+      ".tx2-connect__success_item"
+    );
+    gsap.to(successItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+    gsap.utils.toArray(".number_counter_item").forEach(function (el) {
+      var target = { val: 0 };
+      gsap.to(target, {
+        val: el.getAttribute("data-number"),
+        duration: 3,
+        onUpdate: function () {
+          el.innerText = numberWithCommas(target.val.toFixed(0));
+        },
+      });
+    });
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  }
+  function testimonialsAnimate() {
+    const testimonial = document.querySelector(".swipertestimonial");
+
+    gsap.fromTo(
+      testimonial,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+      }
+    );
+  }
+  function clientsAnimate() {
+    const clientItems = document.querySelectorAll(".tx2-connect__clients_item");
+    gsap.fromTo(
+      clientItems,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      }
+    );
+  }
+  function demoAnimate() {
+    const p = document.querySelector(".tx2-connect__demo_heading_desc");
+    const form = document.querySelector(".tx2-contact");
+    showAnimate(p);
+    showAnimate(form);
+  }
+
+  function whatsnewAnimate() {
+    const newsItems = document.querySelectorAll(".tx2-blog_item");
+    showStaggerAnimate(newsItems);
   }
 
   function showAnimate(el, str) {
