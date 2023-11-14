@@ -26,17 +26,17 @@
         } else if (sectionID === "clients") {
           const clientsInner = document.querySelector(".tx2-clients-inner");
 
-          gsap.to(
-            clientsInner,
-            1,
-            {
-              y: 0,
-              opacity: 1,
-              ease: "power4.inOut",
-              force3D: true,
-            },
-            "-=6"
-          );
+          // gsap.to(
+          //   clientsInner,
+          //   1,
+          //   {
+          //     y: 0,
+          //     opacity: 1,
+          //     ease: "power4.inOut",
+          //     force3D: true,
+          //   },
+          //   "-=6"
+          // );
           clientsAnimate();
         } else if (sectionID === "leadership") {
           leadershipAnimate();
@@ -220,7 +220,6 @@
     const path1 = document.querySelector("#svg-lines-solutions .path1");
     const path2 = document.querySelector("#svg-lines-solutions .path2");
     const path3 = document.querySelector("#svg-lines-solutions .path3");
-
     const svgLinesTL = gsap
       .timeline({
         scrollTrigger: {
@@ -386,10 +385,10 @@
       position: "relative",
     });
 
-    gsap.set(".tx2-clients-inner", {
-      y: 100,
-      opacity: 0,
-    });
+    // gsap.set(".tx2-clients-inner", {
+    //   y: 100,
+    //   opacity: 0,
+    // });
 
     gsap.set(".tx2-hero_object_pill_spacehip", {
       xPercent: 220,
