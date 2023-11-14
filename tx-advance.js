@@ -39,6 +39,7 @@
   function heroAnimate() {
     const astronaut = document.querySelector(".tx2-astronaut__with_cell");
     const logo = document.querySelector(".tx2-connect__logo");
+    const cta_wrap = document.querySelector(".tx2-cta-btn-wrap");
 
     gsap.to(
       astronaut,
@@ -70,6 +71,20 @@
         force3D: true,
       },
       "-=2"
+    );
+
+    gsap.fromTo(
+      cta_wrap,
+      1.8,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+      }
     );
   }
 

@@ -41,6 +41,7 @@
     const combustion_2 = document.querySelector(".tx2-2nd_rocket_combustion");
     const combustion_3 = document.querySelector(".tx2-3rd_rocket_combustion");
     const planet = document.querySelector(".tx2-connect__planet");
+    const cta_wrap = document.querySelector(".tx2-cta-btn-wrap");
 
     const rocket_launch = document.querySelector(
       ".tx2-rocket__launch_combustion"
@@ -58,6 +59,20 @@
         force3D: true,
       },
       "+=3"
+    );
+
+    gsap.fromTo(
+      cta_wrap,
+      1.8,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+      }
     );
 
     gsap.fromTo(
