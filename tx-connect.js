@@ -405,9 +405,9 @@
     const randomTime2 = random(5, 10);
     const randomAngle = random(8, 12);
 
-    moveX(el, 0.3);
+    // moveX(el, 0.3);
     moveY(el, -0.3);
-    rotate(el, 0.3);
+    // rotate(el, 0.0);
 
     function rotate(target, direction) {
       TweenLite.to(target, randomTime2(), {
