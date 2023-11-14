@@ -187,7 +187,7 @@
     );
   }
   function showStaggerAnimate(els, staggerAmount = 0.5) {
-    gsap.to(
+    gsap.fromTo(
       els,
       1.8,
       {
