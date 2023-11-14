@@ -23,6 +23,12 @@
           featuresAnimate();
         } else if (sectionID === "our-success") {
           successAnimate();
+        } else if (sectionID === "testimonials") {
+          testimonialsAnimate();
+        } else if (sectionID === "testimonials") {
+          clientsAnimate();
+        } else if (sectionID === "demo") {
+          demoAnimate();
         }
       },
     });
@@ -108,6 +114,62 @@
     function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+  }
+
+  function testimonialsAnimate() {
+    const testimonial = document.querySelector(".swipertestimonial");
+
+    gsap.fromTo(
+      testimonial,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+      }
+    );
+  }
+  function clientsAnimate() {
+    const clientItems = document.querySelectorAll(".tx2-connect__clients_item");
+    gsap.to(clientItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+  }
+
+  function demoAnimate() {
+    const p = document.querySelector(".tx2-connect__demo_heading_desc");
+    const form = document.querySelector(".tx2-contact");
+    showAnimate(p);
+    showAnimate(form);
+  }
+
+  function showAnimate(el, str) {
+    gsap.fromTo(
+      el,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+      },
+      str
+    );
   }
 
   function titleAnimate(chars) {
