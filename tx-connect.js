@@ -221,6 +221,27 @@
     );
     showAnimate(p);
     showStaggerAnimate(featureItems);
+
+    const path = document.querySelectorAll("#svg-lines-features .path");
+
+    const svgLinesTL = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: path,
+          start: "top 90%",
+          end: "+=170%",
+          scrub: true,
+          once: false,
+          pin: false,
+          markers: false,
+        },
+      })
+      .to(path, 1000, {
+        strokeDashoffset: 0,
+        delay: 1,
+        strokeDasharray: path1.getTotalLength(),
+        ease: "power4.inOut",
+      });
   }
 
   function successAnimate() {
@@ -368,6 +389,12 @@
       opacity: 0,
       xPercent: 15,
       yPercent: -15,
+    });
+
+    const path = document.querySelectorAll("#svg-lines-features .path");
+    gsap.set(path, {
+      strokeDashoffset: path1.getTotalLength(),
+      strokeDasharray: path1.getTotalLength(),
     });
   }
 
