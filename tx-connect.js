@@ -237,12 +237,17 @@
     });
 
     path.forEach((el) => {
-      svgLinesTL.to(el, 1000, {
-        strokeDashoffset: 0,
-        delay: 1,
-        strokeDasharray: el.getTotalLength(),
-        ease: "power4.inOut",
-      });
+      svgLinesTL.to(
+        el,
+        1000,
+        {
+          strokeDashoffset: 0,
+          delay: 1,
+          strokeDasharray: el.getTotalLength(),
+          ease: "power4.inOut",
+        },
+        "start"
+      );
     });
   }
 
