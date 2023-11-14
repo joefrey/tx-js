@@ -397,8 +397,8 @@
 
     path.forEach((el) => {
       gsap.set(el, {
-        strokeDashoffset: path.getTotalLength(),
-        strokeDasharray: path.getTotalLength(),
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
       });
     });
   }
