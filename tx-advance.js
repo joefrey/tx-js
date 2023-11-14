@@ -108,6 +108,29 @@
     const successItems = document.querySelectorAll(
       ".tx2-connect__success_item"
     );
+    const map = document.querySelector(".tx2-connect__success_map");
+
+    gsap.fromTo(
+      map,
+      1.8,
+      {
+        opacity: 0,
+        y: 100,
+        scale: 0.5,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        scale: 1,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      },
+      "-=2"
+    );
+
     gsap.to(successItems, 1.8, {
       ease: "power4.out",
       y: 0,
