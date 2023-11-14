@@ -29,6 +29,8 @@
           clientsAnimate();
         } else if (sectionID === "demo") {
           demoAnimate();
+        } else if (sectionID === "whatsnew") {
+          whatsnewAnimate();
         }
       },
     });
@@ -154,6 +156,11 @@
     showAnimate(form);
   }
 
+  function whatsnewAnimate() {
+    const newsItems = document.querySelectorAll(".tx2-connect__clients_item");
+    showStaggerAnimate(newsItems);
+  }
+
   function showAnimate(el, str) {
     gsap.fromTo(
       el,
@@ -170,6 +177,17 @@
       },
       str
     );
+  }
+  function showStaggerAnimate(els, staggerAmount = 0.5) {
+    gsap.to(els, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: staggerAmount,
+      },
+    });
   }
 
   function titleAnimate(chars) {
