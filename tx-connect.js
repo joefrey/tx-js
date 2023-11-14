@@ -242,7 +242,7 @@
         5000,
         {
           strokeDashoffset: 0,
-          delay: 1,
+          delay: 2,
           strokeDasharray: el.getTotalLength(),
           ease: "power4.inOut",
         },
