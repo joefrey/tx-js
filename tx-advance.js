@@ -138,15 +138,23 @@
   }
   function clientsAnimate() {
     const clientItems = document.querySelectorAll(".tx2-connect__clients_item");
-    gsap.to(clientItems, 1.8, {
-      ease: "power4.out",
-      y: 0,
-      delay: 1,
-      opacity: 1,
-      stagger: {
-        amount: 0.5,
+    gsap.fromTo(
+      clientItems,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
       },
-    });
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      }
+    );
   }
 
   function demoAnimate() {
@@ -179,15 +187,23 @@
     );
   }
   function showStaggerAnimate(els, staggerAmount = 0.5) {
-    gsap.to(els, 1.8, {
-      ease: "power4.out",
-      y: 0,
-      delay: 1,
-      opacity: 1,
-      stagger: {
-        amount: staggerAmount,
+    gsap.to(
+      els,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
       },
-    });
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+        stagger: {
+          amount: staggerAmount,
+        },
+      }
+    );
   }
 
   function titleAnimate(chars) {
