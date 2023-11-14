@@ -156,7 +156,7 @@
                 duration: 4000,
                 delay: 0.9,
                 ease: "power4.inOut",
-                yPercent: 10,
+                yPercent: -10,
               },
               "+=4"
             );
