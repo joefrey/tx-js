@@ -228,7 +228,7 @@
       scrollTrigger: {
         trigger: path,
         start: "top 90%",
-        end: "+=570%",
+        end: "+=270%",
         scrub: true,
         once: false,
         pin: false,
