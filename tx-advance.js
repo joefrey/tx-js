@@ -219,15 +219,24 @@
       -0.2
     );
 
-    linesAboveTL.to(subtleLinesAboveItems, 1.8, {
-      y: 5,
-      x: -5,
-      delay: 0.5,
-      ease: "power4.out",
-      stagger: {
-        amount: 0.3,
-      },
-    });
+    // linesAboveTL.fromTo(
+    //   subtleLinesAboveItems,
+    //   1.8,
+    //   {
+    //     y: 5,
+    //     x: -5,
+    //   },
+    //   {
+    //     y: 5,
+    //     x: -5,
+    //     opacity: 0,
+    //     delay: 0.5,
+    //     ease: "power4.out",
+    //     stagger: {
+    //       amount: 0.3,
+    //     },
+    //   }
+    // );
 
     // linesTopTL.staggerTo(
     //   subtleLinesAboveItems,
