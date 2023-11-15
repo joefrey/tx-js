@@ -252,6 +252,21 @@
       ease: "elastic.out(1,0.3)",
     });
 
+    diagramTL.fromTo(
+      solutionsText,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+        duration: 1.8,
+      },
+      "-=2"
+    );
+
     diagramTL.to(
       actualLine,
       2,
@@ -267,6 +282,21 @@
             force3D: true,
             ease: "elastic.out(1,0.3)",
           });
+
+          diagramTL.fromTo(
+            abiltyText,
+            {
+              opacity: 0,
+              y: 100,
+            },
+            {
+              y: 0,
+              opacity: 1,
+              ease: "power4.inOut",
+              duration: 1.8,
+            },
+            "-=1"
+          );
         },
       },
       "-=1"
