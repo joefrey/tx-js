@@ -201,6 +201,8 @@
 
     const actualLine = document.querySelector("#diagram_actual_line path");
 
+    // const actualLine = document.querySelector("#diagram_actual_line path");
+
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
@@ -222,16 +224,60 @@
       -0.2
     );
 
-    gsap.to(actualLine, 1.6, {
-      strokeDashoffset: 0,
-      strokeDasharray: actualLine.getTotalLength(),
+    // const abovePaths = document.querySelectorAll(
+    //   "#diagram_subtle_lines_above path"
+    // );
 
-      // strokeDashoffset: 0,
-      // strokeDasharray: 0,
+    // abovePaths.forEach((el) => {
+    //   gsap.set(el, {
+    //     strokeDashoffset: el.getTotalLength(),
+    //     strokeDasharray: el.getTotalLength(),
+    //   });
+    // });
 
-      delay: 2,
-      ease: "power4.inOut",
+    // const belowPaths = document.querySelectorAll(
+    //   "#diagram_subtle_lines_below path"
+    // );
+
+    subtleLinesBelowItems.forEach((el) => {
+      gsap.to(
+        el,
+        1.9,
+        {
+          strokeDashoffset: 0,
+          delay: 2,
+          strokeDasharray: el.getTotalLength(),
+          ease: "power4.inOut",
+        },
+        "start"
+      );
     });
+
+    subtleLinesAboveItems.forEach((el) => {
+      gsap.to(
+        el,
+        1.9,
+        {
+          strokeDashoffset: 0,
+          delay: 2,
+          strokeDasharray: el.getTotalLength(),
+          ease: "power4.inOut",
+        },
+        "start"
+      );
+    });
+
+    gsap.to(
+      actualLine,
+      1.6,
+      {
+        strokeDashoffset: 0,
+        strokeDasharray: actualLine.getTotalLength(),
+        delay: 2,
+        ease: "power4.inOut",
+      },
+      "+=1.5"
+    );
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
@@ -386,6 +432,28 @@
     gsap.set(actualLine, {
       strokeDashoffset: actualLine.getTotalLength(),
       strokeDasharray: actualLine.getTotalLength(),
+    });
+
+    const abovePaths = document.querySelectorAll(
+      "#diagram_subtle_lines_above path"
+    );
+
+    abovePaths.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    const belowPaths = document.querySelectorAll(
+      "#diagram_subtle_lines_below path"
+    );
+
+    belowPaths.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
     });
   }
 
