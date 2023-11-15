@@ -206,7 +206,7 @@
       "#diagram_subtle_lines_above path"
     );
     const linesBelowTL = gsap.timeline();
-    const linesTopTL = gsap.timeline();
+    const linesAboveTL = gsap.timeline();
     linesBelowTL.staggerFrom(
       subtleLinesBelowItems,
       1.8,
@@ -219,17 +219,27 @@
       -0.2
     );
 
-    linesTopTL.staggerTo(
-      subtleLinesAboveItems,
-      1.8,
-      {
-        y: -5,
-        x: 5,
-        opacity: 0,
-        ease: "power4.out",
+    linesAboveTL.to(subtleLinesAboveItems, 1.8, {
+      y: 5,
+      x: -5,
+      delay: 0.5,
+      ease: "power4.out",
+      stagger: {
+        amount: 0.3,
       },
-      -0.2
-    );
+    });
+
+    // linesTopTL.staggerTo(
+    //   subtleLinesAboveItems,
+    //   1.8,
+    //   {
+    //     y: -5,
+    //     x: 5,
+    //     opacity: 0,
+    //     ease: "power4.out",
+    //   },
+    //   -0.2
+    // );
   }
 
   function testimonialsAnimate() {
