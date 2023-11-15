@@ -227,7 +227,7 @@
       {
         strokeDashoffset: 0,
         delay: 2,
-        strokeDasharray: el.getTotalLength(),
+        strokeDasharray: elactualLine.getTotalLength(),
         ease: "power4.inOut",
       },
       "+=5"
@@ -382,9 +382,10 @@
       opacity: 0,
     });
 
-    gsap.set("#diagram_actual_line", {
-      strokeDashoffset: el.getTotalLength(),
-      strokeDasharray: el.getTotalLength(),
+    const actualLine = document.querySelector("#diagram_actual_line");
+    gsap.set(actualLine, {
+      strokeDashoffset: actualLine.getTotalLength(),
+      strokeDasharray: actualLine.getTotalLength(),
     });
   }
 
