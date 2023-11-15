@@ -201,13 +201,9 @@
 
     const actualLine = document.querySelector("#diagram_actual_line path");
 
-    const circleStart = document.querySelector(
-      "#diagram_actual_line #circle_start"
-    );
+    const circleStart = document.querySelector("#circle_start");
 
-    const circleEnd = document.querySelector(
-      "#diagram_actual_line #circle_end"
-    );
+    const circleEnd = document.querySelector("#circle_end");
 
     // const actualLine = document.querySelector("#diagram_actual_line path");
 
@@ -219,18 +215,6 @@
     );
 
     const diagramTL = gsap.timeline();
-
-    // linesBelowTL.staggerFrom(
-    //   subtleLinesBelowItems,
-    //   1.8,
-    //   {
-    //     y: -5,
-    //     x: 5,
-    //     opacity: 0,
-    //     ease: "power4.out",
-    //   },
-    //   -0.2
-    // );
 
     subtleLinesBelowItems.forEach((el) => {
       diagramTL.to(
@@ -265,6 +249,7 @@
       {
         scale: 0,
         opacity: 0,
+        transformOrigin: "50% 50%",
       },
       {
         scale: 1.0,
@@ -275,34 +260,28 @@
       }
     );
 
-    diagramTL.to(
-      actualLine,
-      2,
-      {
-        strokeDashoffset: 0,
-        strokeDasharray: actualLine.getTotalLength(),
-        delay: 3,
-        ease: "power4.inOut",
-        onComplete: () => {
-          gsap.fromTo(
-            circleEnd,
-            {
-              scale: 0,
-              opacity: 0,
-            },
-            {
-              scale: 1.0,
-              opacity: 1,
-              duration: 2.5,
-              force3D: true,
-              transformOrigin: "50% 50%",
-              ease: "elastic.out(1,0.3)",
-            }
-          );
-        },
+    diagramTL.to(actualLine, 2, {
+      strokeDashoffset: 0,
+      strokeDasharray: actualLine.getTotalLength(),
+      ease: "power4.inOut",
+      onComplete: () => {
+        gsap.fromTo(
+          circleEnd,
+          {
+            scale: 0,
+            opacity: 0,
+            transformOrigin: "50% 50%",
+          },
+          {
+            scale: 1.0,
+            opacity: 1,
+            duration: 2.5,
+            force3D: true,
+            ease: "elastic.out(1,0.3)",
+          }
+        );
       },
-      "-=3"
-    );
+    });
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
