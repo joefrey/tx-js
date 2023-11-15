@@ -199,12 +199,12 @@
     const vendors = document.querySelector("#vendors");
     const advanceLogo = document.querySelector("#trialx_advance_logo");
 
-    const subtleLinesBelow = document.querySelectorAll(
+    const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
     const linesBelowTL = gsap.timeline();
     linesBelowTL.fromTo(
-      solutionsItems,
+      subtleLinesBelowItems,
       1.8,
       {
         y: -5,
