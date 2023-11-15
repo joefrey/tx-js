@@ -244,42 +244,26 @@
       );
     });
 
-    diagramTL.fromTo(
-      circleStart,
-      {
-        scale: 0,
-        opacity: 0,
-        transformOrigin: "50% 50%",
-      },
-      {
-        scale: 1.0,
-        opacity: 1,
-        duration: 2.5,
-        force3D: true,
-        ease: "elastic.out(1,0.3)",
-      }
-    );
+    diagramTL.to(circleStart, {
+      scale: 1.0,
+      opacity: 1,
+      duration: 2.5,
+      force3D: true,
+      ease: "elastic.out(1,0.3)",
+    });
 
     diagramTL.to(actualLine, 2, {
       strokeDashoffset: 0,
       strokeDasharray: actualLine.getTotalLength(),
       ease: "power4.inOut",
       onComplete: () => {
-        diagramTL.fromTo(
-          circleEnd,
-          {
-            scale: 0,
-            opacity: 0,
-            transformOrigin: "50% 50%",
-          },
-          {
-            scale: 1.0,
-            opacity: 1,
-            duration: 2.5,
-            force3D: true,
-            ease: "elastic.out(1,0.3)",
-          }
-        );
+        diagramTL.to(circleEnd, {
+          scale: 1.0,
+          opacity: 1,
+          duration: 2.5,
+          force3D: true,
+          ease: "elastic.out(1,0.3)",
+        });
       },
     });
 
@@ -459,6 +443,18 @@
         strokeDasharray: el.getTotalLength(),
       });
     });
+
+    const circleStart = document.querySelector("#circle_start");
+
+    const circleEnd = document.querySelector("#circle_end");
+    gsap.set(
+      { circleStart, circleEnd },
+      {
+        scale: 0,
+        opacity: 0,
+        transformOrigin: "50% 50%",
+      }
+    );
   }
 
   var pillSpaceshipFloating = function (el) {
