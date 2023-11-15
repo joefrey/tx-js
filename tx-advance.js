@@ -219,7 +219,7 @@
       -0.2
     );
 
-    linesTopTL.staggerFrom(
+    linesTopTL.staggerTo(
       subtleLinesAboveItems,
       1.8,
       {
