@@ -199,7 +199,7 @@
     const vendors = document.querySelector("#vendors");
     const advanceLogo = document.querySelector("#trialx_advance_logo");
 
-    const actualLine = document.querySelector("#diagram_actual_line");
+    const actualLine = document.querySelector("#diagram_actual_line path");
 
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
@@ -222,12 +222,12 @@
     );
 
     gsap.to(
-      elactualLine,
+      actualLine,
       1000,
       {
         strokeDashoffset: 0,
         delay: 2,
-        strokeDasharray: elactualLine.getTotalLength(),
+        strokeDasharray: actualLine.getTotalLength(),
         ease: "power4.inOut",
       },
       "+=5"
@@ -382,7 +382,7 @@
       opacity: 0,
     });
 
-    const actualLine = document.querySelector("#diagram_actual_line");
+    const actualLine = document.querySelector("#diagram_actual_line path");
     gsap.set(actualLine, {
       strokeDashoffset: actualLine.getTotalLength(),
       strokeDasharray: actualLine.getTotalLength(),
