@@ -206,6 +206,7 @@
       "#diagram_subtle_lines_above path"
     );
     const linesBelowTL = gsap.timeline();
+    const linesTopTL = gsap.timeline();
     linesBelowTL.staggerFrom(
       subtleLinesBelowItems,
       1.8,
@@ -218,8 +219,7 @@
       -0.2
     );
 
-    const linesAboveTL = gsap.timeline();
-    linesAboveTL.staggerFrom(
+    linesTopTL.staggerFrom(
       subtleLinesAboveItems,
       1.8,
       {
