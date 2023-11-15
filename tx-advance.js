@@ -218,37 +218,22 @@
       "#diagram_subtle_lines_above path"
     );
 
-    const linesBelowTL = gsap.timeline();
-    const linesAboveTL = gsap.timeline();
-    linesBelowTL.staggerFrom(
-      subtleLinesBelowItems,
-      1.8,
-      {
-        y: -5,
-        x: 5,
-        opacity: 0,
-        ease: "power4.out",
-      },
-      -0.2
-    );
+    const diagramTL = gsap.timeline();
 
-    // const abovePaths = document.querySelectorAll(
-    //   "#diagram_subtle_lines_above path"
-    // );
-
-    // abovePaths.forEach((el) => {
-    //   gsap.set(el, {
-    //     strokeDashoffset: el.getTotalLength(),
-    //     strokeDasharray: el.getTotalLength(),
-    //   });
-    // });
-
-    // const belowPaths = document.querySelectorAll(
-    //   "#diagram_subtle_lines_below path"
+    // linesBelowTL.staggerFrom(
+    //   subtleLinesBelowItems,
+    //   1.8,
+    //   {
+    //     y: -5,
+    //     x: 5,
+    //     opacity: 0,
+    //     ease: "power4.out",
+    //   },
+    //   -0.2
     // );
 
     subtleLinesBelowItems.forEach((el) => {
-      gsap.to(
+      diagramTL.to(
         el,
         1.9,
         {
@@ -262,7 +247,7 @@
     });
 
     subtleLinesAboveItems.forEach((el) => {
-      gsap.to(
+      diagramTL.to(
         el,
         1.9,
         {
@@ -275,7 +260,7 @@
       );
     });
 
-    gsap.fromTo(
+    diagramTL.fromTo(
       circleStart,
       {
         scale: 0,
@@ -288,32 +273,28 @@
         ease: "elastic.out(1,0.3)",
       }
     );
-    gsap.to(
-      actualLine,
-      1.6,
-      {
-        strokeDashoffset: 0,
-        strokeDasharray: actualLine.getTotalLength(),
-        delay: 3,
-        ease: "power4.inOut",
-        onComplete: () => {
-          gsap.fromTo(
-            circleEnd,
-            {
-              scale: 0,
-              opacity: 0,
-            },
-            {
-              scale: 1.0,
-              opacity: 1,
-              duration: 2.5,
-              ease: "elastic.out(1,0.3)",
-            }
-          );
-        },
+
+    diagramTL.to(actualLine, 1.6, {
+      strokeDashoffset: 0,
+      strokeDasharray: actualLine.getTotalLength(),
+      delay: 3,
+      ease: "power4.inOut",
+      onComplete: () => {
+        diagramTL.fromTo(
+          circleEnd,
+          {
+            scale: 0,
+            opacity: 0,
+          },
+          {
+            scale: 1.0,
+            opacity: 1,
+            duration: 2.5,
+            ease: "elastic.out(1,0.3)",
+          }
+        );
       },
-      "+=8"
-    );
+    });
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
