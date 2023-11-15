@@ -12,6 +12,27 @@
     isMobile = true;
   }
 
+  swiperConnectTestimonial();
+
+  function swiperConnectTestimonial() {
+    var swiper = new Swiper(".swiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 700,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".custom-swiper-button-next",
+        prevEl: ".custom-swiper-button-prev",
+        disabledClass: "custom-swiper-button-disabled",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+
   if (!isMobile) {
     var lineSplitting = document.querySelectorAll(".gsap-line");
     var resSplitting = Splitting({ target: lineSplitting, by: "chars" });
@@ -292,32 +313,6 @@
       //   y: 100,
       //   opacity: 0,
       // });
-    }
-
-    swiperConnectTestimonial();
-
-    function swiperConnectTestimonial() {
-      var swiper = new Swiper(".swipertestimonial", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        speed: 700,
-        autoHeight: true,
-        navigation: {
-          nextEl: ".custom-swiper-button-next",
-          prevEl: ".custom-swiper-button-prev",
-          disabledClass: "custom-swiper-button-disabled",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          // renderBullet: function (index, className) {
-          //   return (
-          //     '<span class="' + className + '">' + (index + 1) + "</span>"
-          //   );
-          // },
-        },
-      });
     }
 
     var pillSpaceshipFloating = function (el) {
