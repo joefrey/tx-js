@@ -270,31 +270,40 @@
         scale: 1.0,
         opacity: 1,
         duration: 2.5,
+        force3D: true,
+        transformOrigin: "50% 50%",
         ease: "elastic.out(1,0.3)",
       }
     );
 
-    diagramTL.to(actualLine, 1.6, {
-      strokeDashoffset: 0,
-      strokeDasharray: actualLine.getTotalLength(),
-      delay: 3,
-      ease: "power4.inOut",
-      onComplete: () => {
-        diagramTL.fromTo(
-          circleEnd,
-          {
-            scale: 0,
-            opacity: 0,
-          },
-          {
-            scale: 1.0,
-            opacity: 1,
-            duration: 2.5,
-            ease: "elastic.out(1,0.3)",
-          }
-        );
+    diagramTL.to(
+      actualLine,
+      1.6,
+      {
+        strokeDashoffset: 0,
+        strokeDasharray: actualLine.getTotalLength(),
+        delay: 3,
+        ease: "power4.inOut",
+        onComplete: () => {
+          gsap.fromTo(
+            circleEnd,
+            {
+              scale: 0,
+              opacity: 0,
+            },
+            {
+              scale: 1.0,
+              opacity: 1,
+              duration: 2.5,
+              force3D: true,
+              transformOrigin: "50% 50%",
+              ease: "elastic.out(1,0.3)",
+            }
+          );
+        },
       },
-    });
+      "+=8"
+    );
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
