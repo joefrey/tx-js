@@ -194,7 +194,7 @@
 
   function whyAdvanceAnimate() {
     const solutionsText = document.querySelector("#solutions_text");
-    const abiltyText = document.querySelector("#abilty");
+    const abiltyText = document.querySelector("#ability");
     const customDev = document.querySelector("#custom_development");
     const vendors = document.querySelector("#vendors");
     const advanceLogo = document.querySelector("#trialx_advance_logo");
@@ -275,13 +275,17 @@
         strokeDasharray: actualLine.getTotalLength(),
         ease: "power4.inOut",
         onComplete: () => {
-          diagramTL.to(circleEnd, {
-            scale: 1.0,
-            opacity: 1,
-            duration: 1.5,
-            force3D: true,
-            ease: "elastic.out(1,0.3)",
-          });
+          diagramTL.to(
+            circleEnd,
+            {
+              scale: 1.0,
+              opacity: 1,
+              duration: 1.5,
+              force3D: true,
+              ease: "elastic.out(1,0.3)",
+            },
+            "-=1.2"
+          );
         },
       },
       "-=1"
@@ -489,7 +493,7 @@
       transformOrigin: "50% 50%",
     });
 
-    const abilityText = document.querySelector("#abilty");
+    const abilityText = document.querySelector("#ability");
     gsap.set(abilityText, {
       opacity: 0,
       y: -50,
