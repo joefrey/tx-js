@@ -274,24 +274,21 @@
         strokeDashoffset: 0,
         strokeDasharray: actualLine.getTotalLength(),
         ease: "power4.inOut",
-        onComplete: () => {
-          diagramTL.to(
-            circleEnd,
-            {
-              scale: 1.0,
-              opacity: 1,
-              duration: 1.5,
-              force3D: true,
-              ease: "elastic.out(1,0.3)",
-            },
-            "-=1.2"
-          );
-        },
       },
       "-=1"
     );
-
     diagramTL
+      .to(
+        circleEnd,
+        {
+          scale: 1.0,
+          opacity: 1,
+          duration: 1.5,
+          force3D: true,
+          ease: "elastic.out(1,0.3)",
+        },
+        "-=.5"
+      )
       .to(
         abiltyText,
         1.8,
