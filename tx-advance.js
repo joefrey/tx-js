@@ -201,6 +201,14 @@
 
     const actualLine = document.querySelector("#diagram_actual_line path");
 
+    const circleStart = document.querySelector(
+      "#diagram_actual_line #circle_start"
+    );
+
+    const circleEnd = document.querySelector(
+      "#diagram_actual_line #circle_end"
+    );
+
     // const actualLine = document.querySelector("#diagram_actual_line path");
 
     const subtleLinesBelowItems = document.querySelectorAll(
@@ -267,6 +275,20 @@
       );
     });
 
+    gsap.fromTo(
+      circleStart,
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1.0,
+        opacity: 1,
+        duration: 2.5,
+        ease: "elastic.out(1,0.3)",
+      },
+      "+=7.9"
+    );
     gsap.to(
       actualLine,
       1.6,
@@ -275,6 +297,21 @@
         strokeDasharray: actualLine.getTotalLength(),
         delay: 3,
         ease: "power4.inOut",
+        onComplete: () => {
+          gsap.fromTo(
+            circleEnd,
+            {
+              scale: 0,
+              opacity: 0,
+            },
+            {
+              scale: 1.0,
+              opacity: 1,
+              duration: 2.5,
+              ease: "elastic.out(1,0.3)",
+            }
+          );
+        },
       },
       "+=8"
     );
