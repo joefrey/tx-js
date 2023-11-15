@@ -298,21 +298,36 @@
         },
         "-=1"
       )
-      .to(vendors, 1.8, {
-        x: 0,
-        opacity: 1,
-        ease: "power4.inOut",
-      })
-      .to(customDev, 1.8, {
-        y: 0,
-        opacity: 1,
-        ease: "power4.inOut",
-      })
-      .to(advanceLogo, 1.8, {
-        y: 0,
-        opacity: 1,
-        ease: "power4.inOut",
-      });
+      .to(
+        vendors,
+        1.8,
+        {
+          x: 0,
+          opacity: 1,
+          ease: "power4.inOut",
+        },
+        "diagram-start"
+      )
+      .to(
+        customDev,
+        1.8,
+        {
+          y: 0,
+          opacity: 1,
+          ease: "power4.inOut",
+        },
+        "diagram-start"
+      )
+      .to(
+        advanceLogo,
+        1.8,
+        {
+          y: 0,
+          opacity: 1,
+          ease: "power4.inOut",
+        },
+        "diagram-start"
+      );
   }
 
   function testimonialsAnimate() {
