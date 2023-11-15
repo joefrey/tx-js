@@ -207,6 +207,7 @@
     const subtleLinesAboveItems = document.querySelectorAll(
       "#diagram_subtle_lines_above path"
     );
+
     const linesBelowTL = gsap.timeline();
     const linesAboveTL = gsap.timeline();
     linesBelowTL.staggerFrom(
@@ -221,17 +222,16 @@
       -0.2
     );
 
-    gsap.timeline().to(
-      actualLine,
-      1000,
-      {
-        strokeDashoffset: 0,
-        delay: 2,
-        strokeDasharray: actualLine.getTotalLength(),
-        ease: "power4.inOut",
-      },
-      "+=5"
-    );
+    gsap.to(actualLine, 1000, {
+      // strokeDashoffset: 0,
+      // strokeDasharray: actualLine.getTotalLength(),
+
+      strokeDashoffset: 0,
+      strokeDasharray: 0,
+
+      delay: 2,
+      ease: "power4.inOut",
+    });
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
