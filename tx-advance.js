@@ -202,6 +202,9 @@
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
+    const subtleLinesAboveItems = document.querySelectorAll(
+      "#diagram_subtle_lines_above path"
+    );
     const linesBelowTL = gsap.timeline();
     linesBelowTL.staggerFrom(
       subtleLinesBelowItems,
@@ -214,8 +217,19 @@
       },
       -0.2
     );
-    // linesBelowTL.reverse();
-    // linesBelowTL.play();
+
+    const linesAboveTL = gsap.timeline();
+    linesAboveTL.staggerTo(
+      subtleLinesAboveItems,
+      1.8,
+      {
+        y: -5,
+        x: 5,
+        opacity: 0,
+        ease: "power4.out",
+      },
+      -0.2
+    );
   }
 
   function testimonialsAnimate() {
