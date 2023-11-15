@@ -256,10 +256,10 @@
       solutionsText,
       {
         opacity: 0,
-        y: 100,
+        x: 50,
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         ease: "power4.inOut",
         duration: 1.8,
@@ -282,56 +282,37 @@
             force3D: true,
             ease: "elastic.out(1,0.3)",
           });
-
-          diagramTL.fromTo(
-            abiltyText,
-            {
-              opacity: 0,
-              y: 100,
-            },
-            {
-              y: 0,
-              opacity: 1,
-              ease: "power4.inOut",
-              duration: 1.8,
-            },
-            "-=1"
-          );
         },
       },
       "-=1"
     );
 
-    // linesAboveTL.fromTo(
-    //   subtleLinesAboveItems,
-    //   1.8,
-    //   {
-    //     y: 5,
-    //     x: -5,
-    //   },
-    //   {
-    //     y: 5,
-    //     x: -5,
-    //     opacity: 0,
-    //     delay: 0.5,
-    //     ease: "power4.out",
-    //     stagger: {
-    //       amount: 0.3,
-    //     },
-    //   }
-    // );
-
-    // linesTopTL.staggerTo(
-    //   subtleLinesAboveItems,
-    //   1.8,
-    //   {
-    //     y: -5,
-    //     x: 5,
-    //     opacity: 0,
-    //     ease: "power4.out",
-    //   },
-    //   -0.2
-    // );
+    diagramTL
+      .to(
+        abiltyText,
+        1.8,
+        {
+          y: 0,
+          opacity: 1,
+          ease: "power4.inOut",
+        },
+        "-=1"
+      )
+      .to(vendors, 1.8, {
+        x: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+      })
+      .to(customDev, 1.8, {
+        y: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+      })
+      .to(advanceLogo, 1.8, {
+        y: 0,
+        opacity: 1,
+        ease: "power4.inOut",
+      });
   }
 
   function testimonialsAnimate() {
@@ -491,6 +472,36 @@
       scale: 0,
       opacity: 0,
       transformOrigin: "50% 50%",
+    });
+
+    const abilityText = document.querySelector("#abilty");
+    gsap.set(abilityText, {
+      opacity: 0,
+      y: -50,
+    });
+
+    const solutionsText = document.querySelector("#solutions_text");
+    gsap.set(solutionsText, {
+      opacity: 0,
+      x: 50,
+    });
+
+    const customDev = document.querySelector("#custom_development");
+    gsap.set(customDev, {
+      opacity: 0,
+      y: 50,
+    });
+
+    const vendors = document.querySelector("#vendors");
+    gsap.set(vendors, {
+      opacity: 0,
+      x: -50,
+    });
+
+    const advanceLogo = document.querySelector("#trialx_advance_logo");
+    gsap.set(advanceLogo, {
+      opacity: 0,
+      y: 50,
     });
   }
 
