@@ -199,6 +199,8 @@
     const vendors = document.querySelector("#vendors");
     const advanceLogo = document.querySelector("#trialx_advance_logo");
 
+    const actualLine = document.querySelector("#diagram_actual_line");
+
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
@@ -217,6 +219,18 @@
         ease: "power4.out",
       },
       -0.2
+    );
+
+    gsap.to(
+      elactualLine,
+      1000,
+      {
+        strokeDashoffset: 0,
+        delay: 2,
+        strokeDasharray: el.getTotalLength(),
+        ease: "power4.inOut",
+      },
+      "+=5"
     );
 
     // linesAboveTL.fromTo(
@@ -366,6 +380,11 @@
     gsap.set(".tx2-advance__features_item, .tx2-connect__success_item", {
       y: 100,
       opacity: 0,
+    });
+
+    gsap.set("#diagram_actual_line", {
+      strokeDashoffset: el.getTotalLength(),
+      strokeDasharray: el.getTotalLength(),
     });
   }
 
