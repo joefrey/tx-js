@@ -515,7 +515,7 @@
     const abilityText = document.querySelector("#ability");
     gsap.set(abilityText, {
       opacity: 0,
-      y: -50,
+      y: -20,
     });
 
     const solutionsText = document.querySelector("#solutions_text");
