@@ -15,7 +15,7 @@
   swiperConnectTestimonial();
 
   function swiperConnectTestimonial() {
-    var swiper = new Swiper(".swipertestimonial", {
+    var swiper = new Swiper(".swiper", {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
@@ -29,11 +29,6 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        // renderBullet: function (index, className) {
-        //   return (
-        //     '<span class="' + className + '">' + (index + 1) + "</span>"
-        //   );
-        // },
       },
     });
   }
