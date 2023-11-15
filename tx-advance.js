@@ -251,7 +251,7 @@
       aboveLines,
       1.8,
       {
-        opacity: 0.5,
+        opacity: 0.05,
         ease: "power4.inOut",
       },
       "start2"
@@ -260,7 +260,7 @@
       belowLines,
       1.8,
       {
-        opacity: 0.5,
+        opacity: 0.05,
         ease: "power4.inOut",
       },
       "start2"
