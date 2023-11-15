@@ -222,12 +222,12 @@
       -0.2
     );
 
-    gsap.to(actualLine, 1000, {
-      // strokeDashoffset: 0,
-      // strokeDasharray: actualLine.getTotalLength(),
-
+    gsap.to(actualLine, 1.6, {
       strokeDashoffset: 0,
-      strokeDasharray: 0,
+      strokeDasharray: actualLine.getTotalLength(),
+
+      // strokeDashoffset: 0,
+      // strokeDasharray: 0,
 
       delay: 2,
       ease: "power4.inOut",
