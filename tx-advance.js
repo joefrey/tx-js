@@ -273,10 +273,10 @@
       {
         strokeDashoffset: 0,
         strokeDasharray: actualLine.getTotalLength(),
-        delay: 2,
+        delay: 3,
         ease: "power4.inOut",
       },
-      "+=1.5"
+      "+=8"
     );
 
     // linesAboveTL.fromTo(
