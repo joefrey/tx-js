@@ -212,7 +212,7 @@
         opacity: 0,
         ease: "power4.out",
       },
-      -0.8
+      -0.2
     );
     // linesBelowTL.reverse();
     // linesBelowTL.play();
