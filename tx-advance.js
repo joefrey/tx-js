@@ -297,7 +297,7 @@
           opacity: 1,
           ease: "power4.inOut",
         },
-        "diagram-start"
+        "-=.5"
       )
       .to(
         vendors,
