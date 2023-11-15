@@ -226,7 +226,7 @@
           strokeDasharray: el.getTotalLength(),
           ease: "power4.inOut",
         },
-        "start"
+        "-=1"
       );
     });
 
@@ -240,7 +240,7 @@
           strokeDasharray: el.getTotalLength(),
           ease: "power4.inOut",
         },
-        "start"
+        "-=1"
       );
     });
 
@@ -297,7 +297,7 @@
           opacity: 1,
           ease: "power4.inOut",
         },
-        "-=3"
+        "-=2.5"
       )
       .to(
         vendors,
