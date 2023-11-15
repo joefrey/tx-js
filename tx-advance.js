@@ -222,6 +222,7 @@
         1.9,
         {
           strokeDashoffset: 0,
+          delay: 1,
           strokeDasharray: el.getTotalLength(),
           ease: "power4.inOut",
         },
@@ -235,6 +236,7 @@
         1.9,
         {
           strokeDashoffset: 0,
+          delay: 1,
           strokeDasharray: el.getTotalLength(),
           ease: "power4.inOut",
         },
