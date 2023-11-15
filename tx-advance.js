@@ -57,6 +57,8 @@
           featuresAnimate();
         } else if (sectionID === "our-success") {
           successAnimate();
+        } else if (sectionID === "whyadvance") {
+          whyAdvanceAnimate();
         } else if (sectionID === "testimonials") {
           testimonialsAnimate();
         } else if (sectionID === "clients") {
@@ -188,6 +190,38 @@
     function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+  }
+
+  function whyAdvanceAnimate() {
+    const solutionsText = document.querySelector("#solutions_text");
+    const abiltyText = document.querySelector("#abilty");
+    const customDev = document.querySelector("#custom_development");
+    const vendors = document.querySelector("#vendors");
+    const advanceLogo = document.querySelector("#trialx_advance_logo");
+
+    const subtleLinesBelow = document.querySelectorAll(
+      "#diagram_subtle_lines_below path"
+    );
+    const linesBelowTL = gsap.timeline();
+    linesBelowTL.fromTo(
+      solutionsItems,
+      1.8,
+      {
+        y: -5,
+        x: 5,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        x: 0,
+        delay: 0.5,
+        opacity: 1,
+        stagger: {
+          amount: 0.3,
+        },
+      }
+    );
   }
 
   function testimonialsAnimate() {
