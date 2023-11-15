@@ -306,10 +306,6 @@
       y: 100,
       opacity: 0,
     });
-    // gsap.set(".tx2-connect__success_item", {
-    //   y: 100,
-    //   opacity: 0,
-    // });
   }
 
   var pillSpaceshipFloating = function (el) {
