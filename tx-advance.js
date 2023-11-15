@@ -218,7 +218,7 @@
         delay: 0.5,
         opacity: 1,
         stagger: {
-          amount: 0.3,
+          amount: 0.8,
         },
       }
     );
