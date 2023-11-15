@@ -202,28 +202,20 @@
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
-    const linesBelowTL = gsap.timeline({ paused: true });
-    linesBelowTL.fromTo(
+    const linesBelowTL = gsap.timeline();
+    linesBelowTL.staggerFrom(
       subtleLinesBelowItems,
       1.8,
       {
         y: -5,
         x: 5,
         opacity: 0,
-      },
-      {
         ease: "power4.out",
-        y: 0,
-        x: 0,
-        delay: 0.5,
-        opacity: 1,
-        stagger: {
-          amount: 0.8,
-        },
-      }
+      },
+      -0.8
     );
-    linesBelowTL.reverse(0);
-    linesBelowTL.play();
+    // linesBelowTL.reverse();
+    // linesBelowTL.play();
   }
 
   function testimonialsAnimate() {
