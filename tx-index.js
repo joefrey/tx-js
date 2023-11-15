@@ -12,6 +12,12 @@
     isMobile = true;
   }
 
+  gsap.set(document.querySelectorAll(".tx2-solutions__item_hover_gradient"), {
+    y: "100%",
+    borderRadius: 0,
+    scale: 0,
+  });
+
   if (!isMobile) {
     var lineSplitting = document.querySelectorAll(".gsap-line");
     var resSplitting = Splitting({ target: lineSplitting, by: "chars" });
