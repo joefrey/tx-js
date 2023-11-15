@@ -207,6 +207,9 @@
 
     // const actualLine = document.querySelector("#diagram_actual_line path");
 
+    const aboveLines = document.querySelector("#diagram_subtle_lines_above");
+    const belowLines = document.querySelector("#diagram_subtle_lines_below");
+
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
@@ -243,6 +246,25 @@
         "start"
       );
     });
+
+    diagramTL.to(
+      aboveLines,
+      1.8,
+      {
+        opacity: 0.5,
+        ease: "power4.inOut",
+      },
+      "start2"
+    );
+    diagramTL.to(
+      belowLines,
+      1.8,
+      {
+        opacity: 0.5,
+        ease: "power4.inOut",
+      },
+      "start2"
+    );
 
     diagramTL.to(circleStart, {
       scale: 1.0,
