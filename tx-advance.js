@@ -219,7 +219,7 @@
     );
 
     const linesAboveTL = gsap.timeline();
-    linesAboveTL.staggerTo(
+    linesAboveTL.staggerFrom(
       subtleLinesAboveItems,
       1.8,
       {
