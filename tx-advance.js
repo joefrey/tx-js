@@ -447,14 +447,16 @@
     const circleStart = document.querySelector("#circle_start");
 
     const circleEnd = document.querySelector("#circle_end");
-    gsap.set(
-      { circleStart, circleEnd },
-      {
-        scale: 0,
-        opacity: 0,
-        transformOrigin: "50% 50%",
-      }
-    );
+    gsap.set(circleStart, {
+      scale: 0,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+    gsap.set(circleEnd, {
+      scale: 0,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
   }
 
   var pillSpaceshipFloating = function (el) {
