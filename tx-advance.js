@@ -202,7 +202,7 @@
     const subtleLinesBelowItems = document.querySelectorAll(
       "#diagram_subtle_lines_below path"
     );
-    const linesBelowTL = gsap.timeline({ paused: true, reverse: true });
+    const linesBelowTL = gsap.timeline({ paused: true });
     linesBelowTL.fromTo(
       subtleLinesBelowItems,
       1.8,
@@ -222,6 +222,7 @@
         },
       }
     );
+    linesBelowTL.reverse(0);
     linesBelowTL.play();
   }
 
