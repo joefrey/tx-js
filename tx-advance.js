@@ -265,7 +265,7 @@
       strokeDasharray: actualLine.getTotalLength(),
       ease: "power4.inOut",
       onComplete: () => {
-        gsap.fromTo(
+        diagramTL.fromTo(
           circleEnd,
           {
             scale: 0,
