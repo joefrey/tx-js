@@ -287,7 +287,7 @@
         duration: 2.5,
         ease: "elastic.out(1,0.3)",
       },
-      "+=7.9"
+      "+=8"
     );
     gsap.to(
       actualLine,
