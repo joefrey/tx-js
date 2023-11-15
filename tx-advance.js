@@ -247,25 +247,30 @@
     diagramTL.to(circleStart, {
       scale: 1.0,
       opacity: 1,
-      duration: 2.5,
+      duration: 1.5,
       force3D: true,
       ease: "elastic.out(1,0.3)",
     });
 
-    diagramTL.to(actualLine, 2, {
-      strokeDashoffset: 0,
-      strokeDasharray: actualLine.getTotalLength(),
-      ease: "power4.inOut",
-      onComplete: () => {
-        diagramTL.to(circleEnd, {
-          scale: 1.0,
-          opacity: 1,
-          duration: 2.5,
-          force3D: true,
-          ease: "elastic.out(1,0.3)",
-        });
+    diagramTL.to(
+      actualLine,
+      2,
+      {
+        strokeDashoffset: 0,
+        strokeDasharray: actualLine.getTotalLength(),
+        ease: "power4.inOut",
+        onComplete: () => {
+          diagramTL.to(circleEnd, {
+            scale: 1.0,
+            opacity: 1,
+            duration: 1.5,
+            force3D: true,
+            ease: "elastic.out(1,0.3)",
+          });
+        },
       },
-    });
+      "-=1"
+    );
 
     // linesAboveTL.fromTo(
     //   subtleLinesAboveItems,
