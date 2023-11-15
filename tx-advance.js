@@ -221,7 +221,7 @@
       -0.2
     );
 
-    gsap.to(
+    gsap.timeline().to(
       actualLine,
       1000,
       {
