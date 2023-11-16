@@ -336,7 +336,7 @@
       description,
       1.8,
       {
-        y: 0,
+        y: 100,
         opacity: 0,
       },
       {
@@ -346,12 +346,12 @@
         opacity: 1,
         onComplete: () => {
           for (i = 0; i < statsItems.length; i++) {
-            gsap.from(
+            gsap.to(
               statsItems[i],
               randomNumber(2, 3),
               {
-                scale: 0,
-                opacity: 0,
+                scale: 1,
+                opacity: 1,
                 delay: randomNumber(0.5, 0.9),
                 transformOrigin: "50% 50%",
                 ease: "elastic.out(1,0.3)",
