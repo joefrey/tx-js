@@ -334,19 +334,24 @@
     showAnimate(description);
 
     for (i = 0; i < statsItems.length; i++) {
-      gsap.from(statsItems[i], randomNumber(1, 2), {
-        ease: "power4.out",
-        scale: 0,
-        // opacity: 0,
-        delay: randomNumber(0.3, 0.8),
-        // delay: 0.5,
-        opacity: 1,
-        transformOrigin: "50% 50%",
-        ease: "elastic.out(1,0.3)",
-        stagger: {
-          amount: 0.2,
+      gsap.from(
+        statsItems[i],
+        randomNumber(1, 2),
+        {
+          ease: "power4.out",
+          scale: 0,
+          // opacity: 0,
+          delay: randomNumber(0.3, 0.8),
+          // delay: 0.5,
+          opacity: 1,
+          transformOrigin: "50% 50%",
+          ease: "elastic.out(1,0.3)",
+          stagger: {
+            amount: 0.2,
+          },
         },
-      });
+        "+=4"
+      );
     }
 
     // var boxes = document.querySelectorAll(".box");
