@@ -331,6 +331,7 @@
 
     const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
     const description = document.querySelector(".tx2-stats__heading_p");
+
     tl.fromTo(
       description,
       1.8,
