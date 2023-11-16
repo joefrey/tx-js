@@ -202,7 +202,7 @@
         ease: "power4.inOut",
         opacity: 0,
         repeat: -1,
-        repeatDelay: 50,
+        repeatDelay: 600,
         force3D: true,
       },
       "-=.5"
@@ -223,7 +223,7 @@
         opacity: 0,
         repeat: -1,
         delay: 5,
-        repeatDelay: 20,
+        repeatDelay: 600, // 10 mins
         force3D: true,
       },
       "+=10"
