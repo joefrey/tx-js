@@ -270,6 +270,7 @@
       scale: 1.0,
       opacity: 1,
       duration: 1.5,
+      delay: 1,
       force3D: true,
       ease: "elastic.out(1,0.3)",
     });
