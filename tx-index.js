@@ -328,38 +328,63 @@
 
   function statsAnimate() {
     const tl = gsap.timeline();
-    const statsItems = document.querySelectorAll(".tx2-stats__item");
-    tl.to(statsItems, 1.8, {
-      ease: "power4.out",
-      x: 0,
-      scale: 1,
-      delay: 0.5,
-      opacity: 1,
-      stagger: {
-        amount: 0.3,
-      },
-    });
-    const parallaxTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#stats",
-        scrub: true,
-        pin: false,
-        start: "top 80%",
-        end: "+=200%",
-        markers: false,
-      },
-    });
 
-    parallaxTL.from(
-      ".tx2-stats-items__trial-listings",
-      {
-        y: 300,
-        duration: 100,
-        delay: 10,
+    const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
+    const description = document.querySelector(".tx2-stats__heading_p");
+    showAnimate(description);
+
+    for (i = 0; i < statsItems.length; i++) {
+      tl.from(statsItems[i], randomNumber(1, 3), {
         ease: "power4.out",
-      },
-      "+=4"
-    );
+        scale: 0,
+        // opacity: 0,
+        delay: randomNumber(0.5, 1.5),
+        opacity: 1,
+        transformOrigin: "50% 50%",
+        ease: "elastic.out(1,0.3)",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    }
+
+    // var boxes = document.querySelectorAll(".box");
+
+    // for (i = 0; i < boxes.length; i++) {
+    //   TweenMax.from(boxes[i], randomNumber(1, 3), {
+    //     opacity: 0,
+    //     yoyo: true,
+    //     delay: randomNumber(0.5, 1.5),
+    //     repeat: -1,
+    //     ease: Linear.easeNone,
+    //   });
+    // }
+
+    function randomNumber(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    // const parallaxTL = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: "#stats",
+    //     scrub: true,
+    //     pin: false,
+    //     start: "top 80%",
+    //     end: "+=200%",
+    //     markers: false,
+    //   },
+    // });
+
+    // parallaxTL.from(
+    //   ".tx2-stats-items__trial-listings",
+    //   {
+    //     y: 300,
+    //     duration: 100,
+    //     delay: 10,
+    //     ease: "power4.out",
+    //   },
+    //   "+=4"
+    // );
   }
 
   function titleAnimate(chars) {
@@ -525,6 +550,24 @@
     });
   }
   solutionsItemsHover();
+
+  function showAnimate(el, str) {
+    gsap.fromTo(
+      el,
+      1.8,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 1,
+        opacity: 1,
+      },
+      str
+    );
+  }
 
   var pillSpaceshipFloating = function (el) {
     const randomX = random(10, 20);
