@@ -338,12 +338,13 @@
         ease: "power4.out",
         scale: 0,
         // opacity: 0,
-        delay: randomNumber(0.5, 1.5),
+        // delay: randomNumber(0.5, 1.5),
+        delay: 0.5,
         opacity: 1,
         transformOrigin: "50% 50%",
         ease: "elastic.out(1,0.3)",
         stagger: {
-          amount: 0.3,
+          amount: 0.2,
         },
       });
     }
