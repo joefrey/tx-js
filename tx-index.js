@@ -334,11 +334,11 @@
     showAnimate(description);
 
     for (i = 0; i < statsItems.length; i++) {
-      tl.from(statsItems[i], randomNumber(1, 3), {
+      gsap.from(statsItems[i], randomNumber(0.5, 1), {
         ease: "power4.out",
         scale: 0,
         // opacity: 0,
-        delay: randomNumber(0.5, 1.5),
+        delay: randomNumber(0.3, 0.5),
         // delay: 0.5,
         opacity: 1,
         transformOrigin: "50% 50%",
