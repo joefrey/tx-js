@@ -350,7 +350,6 @@
               statsItems[i],
               randomNumber(2, 3),
               {
-                ease: "power4.out",
                 scale: 0,
                 opacity: 0,
                 delay: randomNumber(0.5, 0.9),
@@ -473,6 +472,12 @@
     gsap.set(path3, {
       strokeDashoffset: path3.getTotalLength(),
       strokeDasharray: path3.getTotalLength(),
+    });
+
+    const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
+    gsap.set(statsItems, {
+      opacity: 0,
+      scale: 0,
     });
   }
 
