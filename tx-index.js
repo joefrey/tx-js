@@ -331,37 +331,27 @@
 
     const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
     const description = document.querySelector(".tx2-stats__heading_p");
-
-    tl.fromTo(
-      description,
-      1.8,
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        ease: "power4.out",
-        y: 0,
-        delay: 1,
-        opacity: 1,
-      },
-      "-=5"
-    );
+    showAnimate(description);
 
     for (i = 0; i < statsItems.length; i++) {
-      tl.from(statsItems[i], randomNumber(1, 2), {
-        ease: "power4.out",
-        scale: 0,
-        // opacity: 0,
-        delay: randomNumber(0.3, 0.8),
-        // delay: 0.5,
-        opacity: 1,
-        transformOrigin: "50% 50%",
-        ease: "elastic.out(1,0.3)",
-        stagger: {
-          amount: 0.3,
+      gsap.from(
+        statsItems[i],
+        randomNumber(1, 2),
+        {
+          ease: "power4.out",
+          scale: 0,
+          // opacity: 0,
+          delay: randomNumber(0.3, 0.8),
+          // delay: 0.5,
+          opacity: 1,
+          transformOrigin: "50% 50%",
+          ease: "elastic.out(1,0.3)",
+          stagger: {
+            amount: 0.2,
+          },
         },
-      });
+        "+=10"
+      );
     }
 
     // var boxes = document.querySelectorAll(".box");
