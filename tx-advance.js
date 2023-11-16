@@ -207,64 +207,64 @@
 
     // const actualLine = document.querySelector("#diagram_actual_line path");
 
-    const aboveLines = document.querySelector("#diagram_subtle_lines_above");
-    const belowLines = document.querySelector("#diagram_subtle_lines_below");
+    // const aboveLines = document.querySelector("#diagram_subtle_lines_above");
+    // const belowLines = document.querySelector("#diagram_subtle_lines_below");
 
-    const subtleLinesBelowItems = document.querySelectorAll(
-      "#diagram_subtle_lines_below path"
-    );
-    const subtleLinesAboveItems = document.querySelectorAll(
-      "#diagram_subtle_lines_above path"
-    );
+    // const subtleLinesBelowItems = document.querySelectorAll(
+    //   "#diagram_subtle_lines_below path"
+    // );
+    // const subtleLinesAboveItems = document.querySelectorAll(
+    //   "#diagram_subtle_lines_above path"
+    // );
 
     const diagramTL = gsap.timeline();
 
-    subtleLinesBelowItems.forEach((el) => {
-      diagramTL.to(
-        el,
-        1.9,
-        {
-          strokeDashoffset: 0,
-          delay: 1,
-          strokeDasharray: el.getTotalLength(),
-          ease: "power4.inOut",
-        },
-        "start"
-      );
-    });
+    // subtleLinesBelowItems.forEach((el) => {
+    //   diagramTL.to(
+    //     el,
+    //     1.9,
+    //     {
+    //       strokeDashoffset: 0,
+    //       delay: 1,
+    //       strokeDasharray: el.getTotalLength(),
+    //       ease: "power4.inOut",
+    //     },
+    //     "start"
+    //   );
+    // });
 
-    subtleLinesAboveItems.forEach((el) => {
-      diagramTL.to(
-        el,
-        1.9,
-        {
-          strokeDashoffset: 0,
-          delay: 1,
-          strokeDasharray: el.getTotalLength(),
-          ease: "power4.inOut",
-        },
-        "start"
-      );
-    });
+    // subtleLinesAboveItems.forEach((el) => {
+    //   diagramTL.to(
+    //     el,
+    //     1.9,
+    //     {
+    //       strokeDashoffset: 0,
+    //       delay: 1,
+    //       strokeDasharray: el.getTotalLength(),
+    //       ease: "power4.inOut",
+    //     },
+    //     "start"
+    //   );
+    // });
 
-    diagramTL.to(
-      aboveLines,
-      1.8,
-      {
-        opacity: 0.05,
-        ease: "power4.inOut",
-      },
-      "start2"
-    );
-    diagramTL.to(
-      belowLines,
-      1.8,
-      {
-        opacity: 0.05,
-        ease: "power4.inOut",
-      },
-      "start2"
-    );
+    // diagramTL.to(
+    //   aboveLines,
+    //   1.8,
+    //   {
+    //     opacity: 0.05,
+    //     ease: "power4.inOut",
+    //   },
+    //   "start2"
+    // );
+    // diagramTL.to(
+    //   belowLines,
+    //   1.8,
+    //   {
+    //     opacity: 0.05,
+    //     ease: "power4.inOut",
+    //   },
+    //   "start2"
+    // );
 
     diagramTL.to(circleStart, {
       scale: 1.0,
