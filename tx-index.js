@@ -302,21 +302,15 @@
   }
 
   function testimonialAnimate() {
-    const tl = gsap.timeline();
     const testimonialLogo = document.querySelector(
       ".tx2-featured_testimonial__img_wrap"
     );
 
-    tl.to(
-      testimonialLogo,
-      1.8,
-      {
-        ease: "power4.out",
-        y: 0,
-        opacity: 1,
-      },
-      "-=2"
-    );
+    gsap.to(testimonialLogo, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      opacity: 1,
+    });
   }
 
   function leadershipAnimate() {
