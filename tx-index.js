@@ -310,11 +310,11 @@
       testimonialLogo,
       1.8,
       {
-        ease: "power4.out",
         y: 0,
         opacity: 1,
+        ease: "power4.out",
       },
-      "+=5"
+      "+=10"
     );
   }
 
