@@ -352,9 +352,9 @@
               delay: randomNumber(0.5, 0.9),
               transformOrigin: "50% 50%",
               ease: "elastic.out(1,0.3)",
-              stagger: {
-                amount: 0.2,
-              },
+              // stagger: {
+              //   amount: 0.2,
+              // },
             });
           }
         },
