@@ -359,12 +359,11 @@
                   amount: 0.2,
                 },
               },
-              "-=7"
+              "-=.1"
             );
           }
         },
-      },
-      "-=2"
+      }
     );
 
     // var boxes = document.querySelectorAll(".box");
