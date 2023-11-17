@@ -334,7 +334,7 @@
 
     gsap.fromTo(
       description,
-      1.8,
+      1,
       {
         y: 100,
         opacity: 0,
