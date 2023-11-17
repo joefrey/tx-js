@@ -306,16 +306,12 @@
       ".tx2-featured_testimonial__img_wrap"
     );
 
-    gsap.to(
-      testimonialLogo,
-      1.8,
-      {
-        y: 0,
-        opacity: 1,
-        ease: "power4.out",
-      },
-      "+=10"
-    );
+    gsap.to(testimonialLogo, 1.8, {
+      y: 0,
+      delay: 5,
+      opacity: 1,
+      ease: "power4.out",
+    });
   }
 
   function leadershipAnimate() {
