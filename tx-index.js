@@ -351,13 +351,9 @@
     const tl = gsap.timeline();
     const description = document.querySelector(".tx2-stats__heading_p");
 
-    gsap.fromTo(
+    gsap.to(
       description,
       1.8,
-      {
-        y: 100,
-        opacity: 0,
-      },
       {
         ease: "power4.out",
         y: 0,
@@ -479,6 +475,12 @@
       ".tx2-featured_testimonial__img_wrap"
     );
     gsap.set(testimonialLogo, {
+      opacity: 0,
+      y: 100,
+    });
+
+    const description = document.querySelector(".tx2-stats__heading_p");
+    gsap.set(description, {
       opacity: 0,
       y: 100,
     });
