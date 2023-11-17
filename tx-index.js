@@ -319,11 +319,16 @@
       ".tx2-featured_testimonial__img_wrap"
     );
 
-    tl.to(testimonialLogo, 1.8, {
-      ease: "power4.out",
-      y: 0,
-      opacity: 1,
-    });
+    tl.to(
+      testimonialLogo,
+      1.8,
+      {
+        ease: "power4.out",
+        y: 0,
+        opacity: 1,
+      },
+      "+=3"
+    );
   }
 
   function leadershipAnimate() {
