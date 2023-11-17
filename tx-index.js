@@ -1,4 +1,4 @@
-(function () {
+$(document).ready(function () {
   var isMobile = false; //initiate as false
   // device detection
   if (
@@ -625,4 +625,4 @@
       return (direction = 1) => (min + delta * Math.random()) * direction;
     }
   };
-})();
+});
