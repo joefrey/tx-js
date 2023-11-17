@@ -40,6 +40,7 @@
           heroAnimate();
         } else if (sectionID === "stats") {
           statsAnimate();
+          bubblesAnimate();
         } else if (sectionID === "solutions") {
           solutionsAnimate();
         } else if (sectionID === "clients") {
@@ -367,21 +368,34 @@
       },
       "stats_start"
     );
+  }
 
-    for (i = 0; i < statsItems.length; i++) {
-      gsap.to(
-        statsItems[i],
-        randomNumber(2, 3),
-        {
-          scale: 1,
-          opacity: 1,
-          delay: randomNumber(0.5, 0.9),
-          transformOrigin: "50% 50%",
-          ease: "elastic.out(1,0.3)",
-        },
-        "stats_start"
-      );
-    }
+  function bubblesAnimate() {
+    // 'tx2-stats__bubbles'
+
+    ScrollTrigger.create({
+      trigger: ".tx2-stats__bubbles",
+      start: "top 80%",
+      end: "bottom 20%",
+      markers: false,
+      once: true,
+      onEnter: function () {
+        for (i = 0; i < statsItems.length; i++) {
+          gsap.to(
+            statsItems[i],
+            randomNumber(2, 3),
+            {
+              scale: 1,
+              opacity: 1,
+              delay: randomNumber(0.5, 0.9),
+              transformOrigin: "50% 50%",
+              ease: "elastic.out(1,0.3)",
+            },
+            "stats_start"
+          );
+        }
+      },
+    });
 
     function randomNumber(min, max) {
       return Math.random() * (max - min) + min;
