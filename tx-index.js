@@ -359,24 +359,24 @@
         y: 0,
         delay: 1,
         opacity: 1,
-        onComplete: () => {
-          for (i = 0; i < statsItems.length; i++) {
-            gsap.to(
-              statsItems[i],
-              randomNumber(2, 3),
-              {
-                scale: 1,
-                opacity: 1,
-                delay: randomNumber(0.5, 0.9),
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1,0.3)",
-              },
-              "-=100"
-            );
-          }
-        },
-      }
+      },
+      "stats_start"
     );
+
+    for (i = 0; i < statsItems.length; i++) {
+      gsap.to(
+        statsItems[i],
+        randomNumber(2, 3),
+        {
+          scale: 1,
+          opacity: 1,
+          delay: randomNumber(0.5, 0.9),
+          transformOrigin: "50% 50%",
+          ease: "elastic.out(1,0.3)",
+        },
+        "stats_start"
+      );
+    }
 
     function randomNumber(min, max) {
       return Math.random() * (max - min) + min;
