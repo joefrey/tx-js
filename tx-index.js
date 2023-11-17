@@ -334,7 +334,7 @@
 
     gsap.fromTo(
       description,
-      1,
+      1.8,
       {
         y: 100,
         opacity: 0,
@@ -346,21 +346,16 @@
         opacity: 1,
         onComplete: () => {
           for (i = 0; i < statsItems.length; i++) {
-            gsap.to(
-              statsItems[i],
-              randomNumber(2, 3),
-              {
-                scale: 1,
-                opacity: 1,
-                delay: randomNumber(0.5, 0.9),
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1,0.3)",
-                stagger: {
-                  amount: 0.2,
-                },
+            gsap.to(statsItems[i], randomNumber(2, 3), {
+              scale: 1,
+              opacity: 1,
+              delay: randomNumber(0.5, 0.9),
+              transformOrigin: "50% 50%",
+              ease: "elastic.out(1,0.3)",
+              stagger: {
+                amount: 0.2,
               },
-              "-=.1"
-            );
+            });
           }
         },
       }
