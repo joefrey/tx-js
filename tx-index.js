@@ -308,7 +308,7 @@
 
     gsap.to(testimonialLogo, 1.8, {
       y: 0,
-      delay: 5,
+      delay: 2,
       opacity: 1,
       ease: "power4.out",
     });
