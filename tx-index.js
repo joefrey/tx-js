@@ -349,8 +349,6 @@
 
   function statsAnimate() {
     const tl = gsap.timeline();
-
-    const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
     const description = document.querySelector(".tx2-stats__heading_p");
 
     gsap.fromTo(
@@ -372,6 +370,7 @@
 
   function bubblesAnimate() {
     // 'tx2-stats__bubbles'
+    const statsItems = document.querySelectorAll(".tx2-stats-bubble__item");
 
     ScrollTrigger.create({
       trigger: ".tx2-stats__bubbles",
