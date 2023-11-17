@@ -360,58 +360,26 @@
         opacity: 1,
         onComplete: () => {
           for (i = 0; i < statsItems.length; i++) {
-            gsap.to(statsItems[i], randomNumber(2, 3), {
-              scale: 1,
-              opacity: 1,
-              delay: randomNumber(0.5, 0.9),
-              transformOrigin: "50% 50%",
-              ease: "elastic.out(1,0.3)",
-              // stagger: {
-              //   amount: 0.2,
-              // },
-            });
+            gsap.to(
+              statsItems[i],
+              randomNumber(2, 3),
+              {
+                scale: 1,
+                opacity: 1,
+                delay: randomNumber(0.5, 0.9),
+                transformOrigin: "50% 50%",
+                ease: "elastic.out(1,0.3)",
+              },
+              "-=100"
+            );
           }
         },
       }
     );
 
-    // var boxes = document.querySelectorAll(".box");
-
-    // for (i = 0; i < boxes.length; i++) {
-    //   TweenMax.from(boxes[i], randomNumber(1, 3), {
-    //     opacity: 0,
-    //     yoyo: true,
-    //     delay: randomNumber(0.5, 1.5),
-    //     repeat: -1,
-    //     ease: Linear.easeNone,
-    //   });
-    // }
-
     function randomNumber(min, max) {
       return Math.random() * (max - min) + min;
     }
-
-    // const parallaxTL = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: "#stats",
-    //     scrub: true,
-    //     pin: false,
-    //     start: "top 80%",
-    //     end: "+=200%",
-    //     markers: false,
-    //   },
-    // });
-
-    // parallaxTL.from(
-    //   ".tx2-stats-items__trial-listings",
-    //   {
-    //     y: 300,
-    //     duration: 100,
-    //     delay: 10,
-    //     ease: "power4.out",
-    //   },
-    //   "+=4"
-    // );
   }
 
   function titleAnimate(chars) {
