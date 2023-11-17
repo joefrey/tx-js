@@ -57,6 +57,8 @@
           //   "-=6"
           // );
           clientsAnimate();
+        } else if (sectionID === "testimonial") {
+          testimonialAnimate();
         } else if (sectionID === "leadership") {
           leadershipAnimate();
         }
@@ -311,6 +313,18 @@
     });
   }
 
+  function testimonialAnimate() {
+    const testimonialLogo = document.querySelector(
+      ".tx2-featured_testimonial__img_wrap"
+    );
+
+    tl.to(testimonialLogo, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      opacity: 1,
+    });
+  }
+
   function leadershipAnimate() {
     const tl = gsap.timeline();
     const leadershipItems = document.querySelectorAll(".tx2-leadership__item");
@@ -472,6 +486,14 @@
     gsap.set(statsItems, {
       opacity: 0,
       scale: 0,
+    });
+
+    const testimonialLogo = document.querySelector(
+      ".tx2-featured_testimonial__img_wrap"
+    );
+    gsap.set(testimonialLogo, {
+      opacity: 0,
+      y: 100,
     });
   }
 
