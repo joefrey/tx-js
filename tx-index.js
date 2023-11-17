@@ -314,6 +314,7 @@
   }
 
   function testimonialAnimate() {
+    const tl = gsap.timeline();
     const testimonialLogo = document.querySelector(
       ".tx2-featured_testimonial__img_wrap"
     );
