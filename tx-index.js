@@ -317,8 +317,6 @@ $(document).ready(function () {
   function leadershipAnimate() {
     const tl = gsap.timeline();
     const leadershipItems = document.querySelectorAll(".tx2-leadership__item");
-    const p1 = document.querySelector(".about__desc");
-    const p2 = document.querySelector(".about__desc_2");
 
     tl.to(leadershipItems, 1.8, {
       ease: "power4.out",
@@ -329,9 +327,6 @@ $(document).ready(function () {
         amount: 0.5,
       },
     });
-
-    showAnimate(p1);
-    showAnimate(p2);
   }
 
   function statsAnimate() {
