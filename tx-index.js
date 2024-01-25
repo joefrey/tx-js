@@ -298,11 +298,16 @@ $(document).ready(function () {
       opacity: 1,
       ease: "power4.out",
     });
-    tl.to(topLogo2, 1.8, {
-      y: 0,
-      opacity: 1,
-      ease: "power4.out",
-    });
+    tl.to(
+      topLogo2,
+      1.8,
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power4.out",
+      },
+      "-1"
+    );
 
     tl.to(clientsItems, 1.8, {
       ease: "power4.out",
