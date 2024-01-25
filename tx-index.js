@@ -294,13 +294,11 @@ $(document).ready(function () {
 
     tl.to(topLogo1, 1.8, {
       y: 0,
-      delay: 1.5,
       opacity: 1,
       ease: "power4.out",
     });
     tl.to(topLogo2, 1.8, {
       y: 0,
-      delay: 1.5,
       opacity: 1,
       ease: "power4.out",
     });
