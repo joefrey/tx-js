@@ -306,7 +306,7 @@ $(document).ready(function () {
         opacity: 1,
         ease: "power4.out",
       },
-      "-1"
+      "-=1"
     );
 
     tl.to(clientsItems, 1.8, {
