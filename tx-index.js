@@ -289,6 +289,21 @@ $(document).ready(function () {
   function clientsAnimate() {
     const tl = gsap.timeline();
     const clientsItems = document.querySelectorAll(".tx2-clients__item");
+    const topLogo1 = document.querySelector(".top-logos__col-1");
+    const topLogo2 = document.querySelector(".top-logos__col-2");
+
+    tl.to(topLogo1, 1.8, {
+      y: 0,
+      delay: 1.5,
+      opacity: 1,
+      ease: "power4.out",
+    });
+    tl.to(topLogo2, 1.8, {
+      y: 0,
+      delay: 1.5,
+      opacity: 1,
+      ease: "power4.out",
+    });
 
     tl.to(clientsItems, 1.8, {
       ease: "power4.out",
@@ -404,6 +419,12 @@ $(document).ready(function () {
     });
 
     gsap.set(".tx2-solutions__item_wrap", {
+      y: 100,
+      opacity: 0,
+      position: "relative",
+    });
+
+    gsap.set(".top-logos__col-1, .top-logos__col-2", {
       y: 100,
       opacity: 0,
       position: "relative",
