@@ -292,7 +292,7 @@ $(document).ready(function () {
     const topLogo1 = document.querySelector(".top-logos__col-1");
     const topLogo2 = document.querySelector(".top-logos__col-2");
 
-    tl.to(topLogo1, 1.8, {
+    tl.to(topLogo1, 1, {
       y: 0,
       delay: 1,
       opacity: 1,
@@ -300,13 +300,13 @@ $(document).ready(function () {
     });
     tl.to(
       topLogo2,
-      1.8,
+      1,
       {
         y: 0,
         opacity: 1,
         ease: "power4.out",
       },
-      "-=1"
+      "-=2"
     );
 
     tl.to(clientsItems, 1.8, {
