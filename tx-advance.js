@@ -55,6 +55,8 @@ $(document).ready(function () {
           heroAnimate();
         } else if (sectionID === "features") {
           featuresAnimate();
+        } else if (sectionID === "partner-with-us") {
+          partnerWithUsAnimate();
         } else if (sectionID === "our-success") {
           successAnimate();
         } else if (sectionID === "whyadvance") {
@@ -130,6 +132,19 @@ $(document).ready(function () {
     );
 
     gsap.to(featuresItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+  }
+
+  function partnerWithUsAnimate() {
+    const partnerItems = document.querySelectorAll(".advance__features-item");
+    gsap.to(partnerItems, 1.8, {
       ease: "power4.out",
       y: 0,
       delay: 1,
@@ -466,10 +481,13 @@ $(document).ready(function () {
       yPercent: 15,
     });
 
-    gsap.set(".tx2-advance__features_item, .tx2-connect__success_item", {
-      y: 100,
-      opacity: 0,
-    });
+    gsap.set(
+      ".tx2-advance__features_item, .tx2-connect__success_item, .advance__features-item",
+      {
+        y: 100,
+        opacity: 0,
+      }
+    );
 
     const actualLine = document.querySelector("#diagram_actual_line path");
     gsap.set(actualLine, {
