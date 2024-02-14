@@ -306,7 +306,7 @@ $(document).ready(function () {
         opacity: 1,
         ease: "power4.out",
       },
-      "-=1"
+      "-=.5"
     );
 
     tl.to(
@@ -321,7 +321,7 @@ $(document).ready(function () {
           amount: 0.5,
         },
       },
-      "-=1.5"
+      "-=2"
     );
   }
 
