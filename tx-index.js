@@ -321,7 +321,7 @@ $(document).ready(function () {
           amount: 0.5,
         },
       },
-      "-=.5"
+      "-=.8"
     );
   }
 
