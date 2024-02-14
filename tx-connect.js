@@ -57,6 +57,8 @@ $(document).ready(function () {
           featureAnimate();
         } else if (sectionID === "success") {
           successAnimate();
+        } else if (sectionID === "partner-with-us") {
+          partnerWithUsAnimate();
         } else if (sectionID === "testimonials") {
           testimonialsAnimate();
         } else if (sectionID === "clients") {
@@ -360,6 +362,20 @@ $(document).ready(function () {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
   }
+
+  function partnerWithUsAnimate() {
+    const partnerItems = document.querySelectorAll(".advance__features-item");
+    gsap.to(partnerItems, 1.8, {
+      ease: "power4.out",
+      y: 0,
+      delay: 1,
+      opacity: 1,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+  }
+
   function testimonialsAnimate() {
     const testimonial = document.querySelector(".swipertestimonial");
 
@@ -461,6 +477,11 @@ $(document).ready(function () {
   }
 
   function resetElements() {
+    gsap.set(".advance__features-item", {
+      y: 100,
+      opacity: 0,
+    });
+
     gsap.set(".gsap-line span > span", {
       y: 80,
       skewY: 10,
