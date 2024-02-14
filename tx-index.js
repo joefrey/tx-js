@@ -309,15 +309,20 @@ $(document).ready(function () {
       "-=1"
     );
 
-    tl.to(clientsItems, 1.8, {
-      ease: "power4.out",
-      y: 0,
-      delay: 0,
-      opacity: 1,
-      stagger: {
-        amount: 0.5,
+    tl.to(
+      clientsItems,
+      1.8,
+      {
+        ease: "power4.out",
+        y: 0,
+        delay: 0,
+        opacity: 1,
+        stagger: {
+          amount: 0.5,
+        },
       },
-    });
+      "-=1.5"
+    );
   }
 
   function testimonialAnimate() {
