@@ -611,6 +611,8 @@ $(document).ready(function () {
     let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
     let prescreenerIcon = $(".shr_icon__prescreener");
+    let heading = $('.tx2-shr__heading');
+    let paragraph = $('.shr__paragraph');
   
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -658,7 +660,35 @@ $(document).ready(function () {
       duration: 0.5,
       ease: "expo.out",
       
-    }, "-=0.5");
+      }, "-=0.5");
+    
+    tl.fromTo(heading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      });
+    
+    tl.fromTo(paragraph, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
 
     
     /*tl.from(prescreenerIcon, {
