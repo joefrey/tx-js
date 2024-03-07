@@ -616,7 +616,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: triggerElement,
         // trigger element - viewport
-        start: "top top",
+        start: "top center",
         end: "bottom top",
         // scrub: 0
         once: true,
@@ -645,10 +645,10 @@ $(document).ready(function () {
       duration: 2
     });
     tl.fromTo(prescreenerIcon, {
-      rotateX: "0deg",
+      rotateY: "0deg",
     },
     {
-      rotateX: "45deg",
+      rotateY: "45deg",
       duration: 2
     });
 
