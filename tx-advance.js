@@ -658,7 +658,7 @@ $(document).ready(function () {
       duration: 0.5,
       ease: "expo.out",
       
-    }, "-=1");
+    }, "-=0.5");
 
     
     /*tl.from(prescreenerIcon, {
