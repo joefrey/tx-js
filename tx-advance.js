@@ -618,13 +618,13 @@ $(document).ready(function () {
         // trigger element - viewport
         start: "top center",
         end: "bottom top",
-        scrub: 1
+        scrub: 0
       }
     });
     tl.fromTo(targetElement, {
         opacity: 0,
         visibility: "hidden",
-        y: "-100px",
+        y: "100px",
       },
       {
         opacity: 1,
