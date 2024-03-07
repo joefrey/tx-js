@@ -645,7 +645,7 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 2,
+      duration: 1,
       ease: "expo.out",
     });
     tl.fromTo(prescreenerIcon, {
@@ -658,7 +658,7 @@ $(document).ready(function () {
       duration: 0.5,
       ease: "expo.out",
       
-    });
+    }, "-=1");
 
     
     /*tl.from(prescreenerIcon, {
