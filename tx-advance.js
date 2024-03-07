@@ -616,7 +616,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: triggerElement,
         // trigger element - viewport
-        start: "top center",
+        start: "top top",
         end: "bottom top",
         // scrub: 0
         once: true,
