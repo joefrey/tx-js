@@ -622,18 +622,23 @@ $(document).ready(function () {
         once: true,
       }
     });
-    tl.fromTo(targetElement, {
-        opacity: 0,
-        visibility: "hidden",
-        y: "100px",
+    tl.from(targetElement, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      ease: "linear",
+      duration: 1
       },
-      {
-        opacity: 1,
-        visibility: "visible",
-        y: 0,
-        duration: 1
-      }
     );
+    tl.from(prescreenerIcon, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      rotateX: "45deg",
+      ease: "linear",
+      duration: 5
+    },
+  );
     /*tl.from(prescreenerIcon, {
       
     })*/
