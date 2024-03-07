@@ -654,7 +654,7 @@ $(document).ready(function () {
     },
     {
       ransformOrign: '0% 0%',
-      rotation: 15,
+      rotation: 5,
       duration: 0.5,
       ease: "expo.out",
       
