@@ -632,7 +632,8 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1
+      duration: 1,
+      ease: "expo.out",
     });
     tl.fromTo(prescreenerIcon, {
       opacity: 0,
@@ -644,7 +645,8 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 2
+      duration: 2,
+      ease: "expo.out",
     });
     tl.fromTo(prescreenerIcon, {
       ransformOrign: '0% 0%',
@@ -652,8 +654,10 @@ $(document).ready(function () {
     },
     {
       ransformOrign: '0% 0%',
-      rotation: 45,
-      duration: 2
+      rotation: 15,
+      duration: 0.5,
+      ease: "expo.out",
+      
     });
 
     
