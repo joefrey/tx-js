@@ -645,10 +645,12 @@ $(document).ready(function () {
       duration: 2
     });
     tl.fromTo(prescreenerIcon, {
-      rotateY: "0deg",
+      ransformOrign: '0% 0%',
+      rotation: 0
     },
     {
-      rotateY: "45deg",
+      ransformOrign: '0% 0%',
+      rotation: 45,
       duration: 2
     });
 
