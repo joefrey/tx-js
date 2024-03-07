@@ -606,4 +606,36 @@ $(document).ready(function () {
       return (direction = 1) => (min + delta * Math.random()) * direction;
     }
   };
+
+  $(".tx2-two__col").each(function (index) {
+    let triggerElement = $(this);
+    let targetElement = $(".shr_spaceship_outerspace");
+    let prescreenerIcon = $(".shr_icon__prescreener");
+  
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top center",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+    tl.fromTo(targetElement, {
+        opacity: 0,
+        visibility: "hidden",
+        y: "-100px",
+      },
+      {
+        opacity: 1,
+        visibility: "visible",
+        y: 0,
+        duration: 1
+      }
+    );
+    /*tl.from(prescreenerIcon, {
+      
+    })*/
+  });
+  
 });
