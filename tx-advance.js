@@ -622,35 +622,35 @@ $(document).ready(function () {
         once: true,
       }
     });
-    tl.from(targetElement, {
-        opacity: 0,
-        visibility: "hidden",
-        y: "100px",
-      },
-      {
-        opacity: 1,
-        visibility: "visible",
-        y: 0,
-        duration: 1
+    tl.fromTo(targetElement, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1
     });
-    // tl.from(prescreenerIcon, {
-    //   opacity: 0,
-    //   visibility: "hidden",
-    //   y: "100px",
-    // },
-    // {
-    //   opacity: 1,
-    //   visibility: "visible",
-    //   y: 0,
-    //   duration: 2
-    // });
-    // tl.from(prescreenerIcon, {
-    //   rotateX: "0deg",
-    // },
-    // {
-    //   rotateX: "45deg",
-    //   duration: 2
-    // });
+    tl.fromTo(prescreenerIcon, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 2
+    });
+    tl.fromTo(prescreenerIcon, {
+      rotateX: "0deg",
+    },
+    {
+      rotateX: "45deg",
+      duration: 2
+    });
 
     
     /*tl.from(prescreenerIcon, {
