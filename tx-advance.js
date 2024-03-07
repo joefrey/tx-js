@@ -618,7 +618,8 @@ $(document).ready(function () {
         // trigger element - viewport
         start: "top center",
         end: "bottom top",
-        scrub: 0
+        // scrub: 0
+        once: true,
       }
     });
     tl.fromTo(targetElement, {
