@@ -626,6 +626,7 @@ $(document).ready(function () {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
+      zIndex: 1
     },
     {
       opacity: 1,
@@ -637,6 +638,7 @@ $(document).ready(function () {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
+      zIndex: 3
     },
     {
       opacity: 1,
