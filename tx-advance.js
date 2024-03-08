@@ -651,13 +651,14 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+      });
+    
     tl.fromTo(prescreenerIcon, {
-      ransformOrign: '0% 0%',
+      transformOrign: '0% 0%',
       rotation: 0
     },
     {
-      ransformOrign: '0% 0%',
+      transformOrign: '100% 100%',
       rotation: 5,
       duration: 1,
       ease: "expo.out",
@@ -726,7 +727,8 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+      });
+    // icon 1
     tl.fromTo(icon1, {
       opacity: 0,
       visibility: "hidden",
@@ -741,11 +743,11 @@ $(document).ready(function () {
       ease: "expo.out",
     });
     tl.fromTo(icon1, {
-      ransformOrign: '0% 0%',
+      transformOrign: '0% 0%',
       rotation: 0
     },
     {
-      ransformOrign: '0% 0%',
+      transformOrign: '100% 100%',
       rotation: 5,
       duration: 1,
       ease: "expo.out",
@@ -768,11 +770,11 @@ $(document).ready(function () {
       ease: "expo.out",
     });
     tl.fromTo(icon2, {
-      ransformOrign: '0% 0%',
+      transformOrign: '0% 0%',
       rotation: 0
     },
     {
-      ransformOrign: '0% 0%',
+      transformOrign: '100% 100%',
       rotation: "-5",
       duration: 1,
       ease: "expo.out",
