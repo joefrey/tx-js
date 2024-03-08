@@ -709,6 +709,131 @@ $(document).ready(function () {
   shrScrolltrigger1();
 
 
+  var shrScrolltrigger2 = function () {
+    
+    // let triggerElement = $(this);
+    let targetElement = $(".shr_astronaut");
+
+
+    let icon1 = $(".shr__temperature");
+    let icon2 = $(".shr__smartwatch");
+    
+    let heading = $('.tx2-shr__heading');
+    let paragraph = $('.shr__paragraph');
+
+    let scrollTrigger2TL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".shr_scrolltrigger2",
+        // TOGGLE ACTIONS ORDER
+        // element enters view from screen bottom
+        // element exits view from screen top
+        // element re-enters view from screen top
+        // element re-exits view from screen bottom
+        toggleActions: "restart pause resume reset"
+      }
+    });
+
+    scrollTrigger2TL.fromTo(targetElement, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    
+    // icon 1
+    scrollTrigger2TL.fromTo(icon1, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    scrollTrigger2TL.fromTo(icon1, {
+      transformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      transformOrign: '100% 100%',
+      rotation: 5,
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    
+    // icon 2
+    scrollTrigger2TL.fromTo(icon2, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    scrollTrigger2TL.fromTo(icon2, {
+      transformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      transformOrign: '100% 100%',
+      rotation: "-5",
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    
+    
+    
+    scrollTrigger2TL.fromTo(heading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      });
+    
+    scrollTrigger2TL.fromTo(paragraph, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+  }
+  shrScrolltrigger2();
+
+
 
   
 
