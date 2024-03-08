@@ -818,6 +818,127 @@ $(document).ready(function () {
 
 
 
+  var shrScrolltrigger3 = function () {
+    
+    // let triggerElement = $(this);
+    let targetElement = $(".shr_iphone_notifications");
+
+
+    let icon1 = $(".shr__notification");
+    let icon2 = $(".shr__inbox_open");
+    
+    let heading = $('.shr_heading_3');
+    let paragraph = $('.shr_par_3');
+
+    let scrollTrigger3TL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".shr_scrolltrigger3",
+        start: "top center",
+        end: "bottom top",
+    //     // scrub: 0
+        once: true,
+      }
+    });
+
+    scrollTrigger3TL.fromTo(targetElement, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    
+    // icon 1
+    scrollTrigger3TL.fromTo(icon1, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    }, "-=0.5");
+    scrollTrigger3TL.fromTo(icon1, {
+      transformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      transformOrign: '100% 100%',
+      rotation: 5,
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    
+    // icon 2
+    scrollTrigger3TL.fromTo(icon2, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    }, "-=0.5");
+    scrollTrigger3TL.fromTo(icon2, {
+      transformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      transformOrign: '100% 100%',
+      rotation: "-5",
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    scrollTrigger3TL.fromTo(heading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      }, "-=0.5");
+    
+    scrollTrigger3TL.fromTo(paragraph, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    }, "-=0.5");
+  }
+  shrScrolltrigger3();
+
+
+
   
 
 
