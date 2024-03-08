@@ -613,8 +613,8 @@ $(document).ready(function () {
     // let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
     let prescreenerIcon = $(".shr_icon__prescreener");
-    let heading = $('.tx2-shr__heading');
-    let paragraph = $('.shr__paragraph');
+    let heading = $('.heading1');
+    let paragraph = $('.par_1');
 
     let scrollTrigger1TL = gsap.timeline({
       scrollTrigger: {
@@ -716,8 +716,8 @@ $(document).ready(function () {
     let icon1 = $(".shr__temperature");
     let icon2 = $(".shr__smartwatch");
     
-    let heading = $('.tx2-shr__heading');
-    let paragraph = $('.shr__paragraph');
+    let heading = $('.heading2');
+    let paragraph = $('.par_2');
 
     let scrollTrigger2TL = gsap.timeline({
       scrollTrigger: {
