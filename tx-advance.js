@@ -613,8 +613,8 @@ $(document).ready(function () {
     // let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
     let prescreenerIcon = $(".shr_icon__prescreener");
-    let heading = $('.heading1');
-    let paragraph = $('.par_1');
+    let heading = $('.shr_heading_1');
+    let paragraph = $('.shr_par_1');
 
     let scrollTrigger1TL = gsap.timeline({
       scrollTrigger: {
@@ -625,16 +625,6 @@ $(document).ready(function () {
         once: true,
       }
     });
-    // let tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: triggerElement,
-    //     // trigger element - viewport
-    //     start: "top center",
-    //     end: "bottom top",
-    //     // scrub: 0
-    //     once: true,
-    //   }
-    // });
 
     scrollTrigger1TL.fromTo(targetElement, {
       opacity: 0,
@@ -662,7 +652,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+    },"-=0.5");
     
     scrollTrigger1TL.fromTo(prescreenerIcon, {
       transformOrign: '0% 0%',
@@ -688,7 +678,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      });
+      }, "-=0.5");
     
     scrollTrigger1TL.fromTo(paragraph, {
       opacity: 0,
@@ -702,7 +692,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+    }, "-=0.5");
   }
   shrScrolltrigger1();
 
@@ -716,8 +706,8 @@ $(document).ready(function () {
     let icon1 = $(".shr__temperature");
     let icon2 = $(".shr__smartwatch");
     
-    let heading = $('.heading2');
-    let paragraph = $('.par_2');
+    let heading = $('.shr_heading_2');
+    let paragraph = $('.shr_par_2');
 
     let scrollTrigger2TL = gsap.timeline({
       scrollTrigger: {
@@ -756,7 +746,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+    }, "-=0.5");
     scrollTrigger2TL.fromTo(icon1, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -783,7 +773,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+    }, "-=0.5");
     scrollTrigger2TL.fromTo(icon2, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -808,7 +798,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      });
+      }, "-=0.5");
     
     scrollTrigger2TL.fromTo(paragraph, {
       opacity: 0,
@@ -822,7 +812,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    });
+    }, "-=0.5");
   }
   shrScrolltrigger2();
 
