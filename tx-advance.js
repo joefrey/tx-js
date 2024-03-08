@@ -637,7 +637,7 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: .8,
       ease: "expo.out",
     });
     
@@ -653,7 +653,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    },"-=1");
+    },"-=0.5");
     
     scrollTrigger1TL.fromTo(prescreenerIcon, {
       transformOrign: '0% 0%',
@@ -661,8 +661,8 @@ $(document).ready(function () {
     },
     {
       transformOrign: '100% 100%',
-      rotation: 7,
-      duration: 1,
+      rotation: 5,
+      duration: 0.8,
       ease: "expo.out",
       
       }, "-=0.5");
@@ -677,9 +677,9 @@ $(document).ready(function () {
         opacity: 1,
         visibility: "visible",
         y: 0,
-        duration: 1,
+        duration: 0.8,
         ease: "expo.out",
-        }, "-=1");
+        }, "-=0.5");
     
     scrollTrigger1TL.fromTo(heading, {
       opacity: 0,
@@ -691,9 +691,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-      }, "-=1");
+      }, "-=0.5");
     
     scrollTrigger1TL.fromTo(paragraph, {
       opacity: 0,
@@ -705,9 +705,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
   }
   shrScrolltrigger1();
 
@@ -745,7 +745,7 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
     });
     
@@ -760,17 +760,17 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
     scrollTrigger2TL.fromTo(icon1, {
       transformOrign: '0% 0%',
       rotation: 0
     },
     {
       transformOrign: '100% 100%',
-      rotation: 7,
-      duration: 1,
+      rotation: 5,
+      duration: 0.8,
       ease: "expo.out",
       
       }, "-=0.5");
@@ -787,9 +787,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
     scrollTrigger2TL.fromTo(icon2, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -797,7 +797,7 @@ $(document).ready(function () {
     {
       transformOrign: '100% 100%',
       rotation: "-5",
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
       
       }, "-=0.5");
@@ -812,9 +812,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-      }, "-=1");
+      }, "-=0.5");
     
     scrollTrigger2TL.fromTo(heading, {
       opacity: 0,
@@ -826,9 +826,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-      }, "-=1");
+      }, "-=0.5");
     
     scrollTrigger2TL.fromTo(paragraph, {
       opacity: 0,
@@ -840,9 +840,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
   }
   shrScrolltrigger2();
 
@@ -881,7 +881,7 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
     });
     
@@ -896,17 +896,17 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
     scrollTrigger3TL.fromTo(icon1, {
       transformOrign: '0% 0%',
       rotation: 0
     },
     {
       transformOrign: '100% 100%',
-      rotation: 7,
-      duration: 1,
+      rotation: 5,
+      duration: 0.8,
       ease: "expo.out",
       
       }, "-=0.5");
@@ -923,9 +923,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
     scrollTrigger3TL.fromTo(icon2, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -933,24 +933,24 @@ $(document).ready(function () {
     {
       transformOrign: '100% 100%',
       rotation: "-5",
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
       
       }, "-=0.5");
     
-    scrollTrigger3TL.fromTo(subheading, {
-      opacity: 0,
-      visibility: "hidden",
-      y: "100px",
-      zIndex: 1
-    },
-    {
-      opacity: 1,
-      visibility: "visible",
-      y: 0,
-      duration: 1,
-      ease: "expo.out",
-      }, "-=1");
+      scrollTrigger3TL.fromTo(subheading, {
+        opacity: 0,
+        visibility: "hidden",
+        y: "100px",
+        zIndex: 1
+      },
+      {
+        opacity: 1,
+        visibility: "visible",
+        y: 0,
+        duration: 0.8,
+        ease: "expo.out",
+        }, "-=0.5");
     
     scrollTrigger3TL.fromTo(heading, {
       opacity: 0,
@@ -962,9 +962,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-      }, "-=1");
+      }, "-=0.5");
     
     scrollTrigger3TL.fromTo(paragraph, {
       opacity: 0,
@@ -976,9 +976,9 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "expo.out",
-    }, "-=1");
+    }, "-=0.5");
   }
   shrScrolltrigger3();
   
