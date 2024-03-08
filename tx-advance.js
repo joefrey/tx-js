@@ -613,6 +613,7 @@ $(document).ready(function () {
     // let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
     let prescreenerIcon = $(".shr_icon__prescreener");
+    let subheading = $('.shr__subheading_1');
     let heading = $('.shr_heading_1');
     let paragraph = $('.shr_par_1');
 
@@ -660,11 +661,25 @@ $(document).ready(function () {
     },
     {
       transformOrign: '100% 100%',
-      rotation: 5,
+      rotation: 7,
       duration: 1,
       ease: "expo.out",
       
       }, "-=0.5");
+    
+      scrollTrigger1TL.fromTo(subheading, {
+        opacity: 0,
+        visibility: "hidden",
+        y: "100px",
+        zIndex: 1
+      },
+      {
+        opacity: 1,
+        visibility: "visible",
+        y: 0,
+        duration: 1,
+        ease: "expo.out",
+        }, "-=1");
     
     scrollTrigger1TL.fromTo(heading, {
       opacity: 0,
@@ -706,6 +721,7 @@ $(document).ready(function () {
     let icon1 = $(".shr__temperature");
     let icon2 = $(".shr__smartwatch");
     
+    let subheading = $('.shr__subheading_2');
     let heading = $('.shr_heading_2');
     let paragraph = $('.shr_par_2');
 
@@ -746,14 +762,14 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
     scrollTrigger2TL.fromTo(icon1, {
       transformOrign: '0% 0%',
       rotation: 0
     },
     {
       transformOrign: '100% 100%',
-      rotation: 5,
+      rotation: 7,
       duration: 1,
       ease: "expo.out",
       
@@ -773,7 +789,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
     scrollTrigger2TL.fromTo(icon2, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -785,6 +801,20 @@ $(document).ready(function () {
       ease: "expo.out",
       
       }, "-=0.5");
+    
+    scrollTrigger2TL.fromTo(subheading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      }, "-=1");
     
     scrollTrigger2TL.fromTo(heading, {
       opacity: 0,
@@ -798,7 +828,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      }, "-=0.5");
+      }, "-=1");
     
     scrollTrigger2TL.fromTo(paragraph, {
       opacity: 0,
@@ -812,7 +842,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
   }
   shrScrolltrigger2();
 
@@ -827,6 +857,7 @@ $(document).ready(function () {
     let icon1 = $(".shr__notification");
     let icon2 = $(".shr__inbox_open");
     
+    let subheading = $('.shr__subheading_3');
     let heading = $('.shr_heading_3');
     let paragraph = $('.shr_par_3');
 
@@ -867,14 +898,14 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
     scrollTrigger3TL.fromTo(icon1, {
       transformOrign: '0% 0%',
       rotation: 0
     },
     {
       transformOrign: '100% 100%',
-      rotation: 5,
+      rotation: 7,
       duration: 1,
       ease: "expo.out",
       
@@ -894,7 +925,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
     scrollTrigger3TL.fromTo(icon2, {
       transformOrign: '0% 0%',
       rotation: 0
@@ -906,6 +937,20 @@ $(document).ready(function () {
       ease: "expo.out",
       
       }, "-=0.5");
+    
+    scrollTrigger3TL.fromTo(subheading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      }, "-=1");
     
     scrollTrigger3TL.fromTo(heading, {
       opacity: 0,
@@ -919,7 +964,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      }, "-=0.5");
+      }, "-=1");
     
     scrollTrigger3TL.fromTo(paragraph, {
       opacity: 0,
@@ -933,18 +978,8 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
   }
   shrScrolltrigger3();
-
-
-
-  
-
-
-  // let temperature = $('.shr__temperature');
-  // let watch = $('.shr__smartwatch');
-  // let notification = $('.shr__notification');
-  // let inbox = $('.shr__inbox_open');
   
 });
