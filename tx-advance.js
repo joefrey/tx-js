@@ -652,7 +652,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    },"-=0.5");
+    },"-=1");
     
     scrollTrigger1TL.fromTo(prescreenerIcon, {
       transformOrign: '0% 0%',
@@ -678,7 +678,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      }, "-=0.5");
+      }, "-=1");
     
     scrollTrigger1TL.fromTo(paragraph, {
       opacity: 0,
@@ -692,7 +692,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-    }, "-=0.5");
+    }, "-=1");
   }
   shrScrolltrigger1();
 
