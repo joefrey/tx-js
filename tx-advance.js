@@ -619,12 +619,10 @@ $(document).ready(function () {
     let scrollTrigger1TL = gsap.timeline({
       scrollTrigger: {
         trigger: ".shr_scrolltrigger1",
-        // TOGGLE ACTIONS ORDER
-        // element enters view from screen bottom
-        // element exits view from screen top
-        // element re-enters view from screen top
-        // element re-exits view from screen bottom
-        toggleActions: "restart pause resume reset"
+        start: "top center",
+        end: "bottom top",
+    //     // scrub: 0
+        once: true,
       }
     });
     // let tl = gsap.timeline({
@@ -724,12 +722,10 @@ $(document).ready(function () {
     let scrollTrigger2TL = gsap.timeline({
       scrollTrigger: {
         trigger: ".shr_scrolltrigger2",
-        // TOGGLE ACTIONS ORDER
-        // element enters view from screen bottom
-        // element exits view from screen top
-        // element re-enters view from screen top
-        // element re-exits view from screen bottom
-        toggleActions: "restart pause resume reset"
+        start: "top center",
+        end: "bottom top",
+    //     // scrub: 0
+        once: true,
       }
     });
 
@@ -799,9 +795,6 @@ $(document).ready(function () {
       ease: "expo.out",
       
       }, "-=0.5");
-    
-    
-    
     
     scrollTrigger2TL.fromTo(heading, {
       opacity: 0,
