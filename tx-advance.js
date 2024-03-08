@@ -607,7 +607,7 @@ $(document).ready(function () {
     }
   };
 
-  $(".shr_scrollTrigger1").each(function (index) {
+  $(".tx2-two__col").each(function (index) {
     let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
 
@@ -626,6 +626,7 @@ $(document).ready(function () {
         once: true,
       }
     });
+
     tl.fromTo(targetElement, {
       opacity: 0,
       visibility: "hidden",
@@ -639,6 +640,7 @@ $(document).ready(function () {
       duration: 1,
       ease: "expo.out",
     });
+    
     tl.fromTo(prescreenerIcon, {
       opacity: 0,
       visibility: "hidden",
@@ -651,7 +653,7 @@ $(document).ready(function () {
       y: 0,
       duration: 1,
       ease: "expo.out",
-      });
+    });
     
     tl.fromTo(prescreenerIcon, {
       transformOrign: '0% 0%',
