@@ -607,27 +607,38 @@ $(document).ready(function () {
     }
   };
 
-  $(".tx2-two__col").each(function (index) {
-    let triggerElement = $(this);
+  
+  var shrScrolltrigger1 = function () {
+    
+    // let triggerElement = $(this);
     let targetElement = $(".shr_spaceship_outerspace");
-
-
     let prescreenerIcon = $(".shr_icon__prescreener");
     let heading = $('.tx2-shr__heading');
     let paragraph = $('.shr__paragraph');
-  
-    let tl = gsap.timeline({
+
+    let scrollTrigger1TL = gsap.timeline({
       scrollTrigger: {
-        trigger: triggerElement,
-        // trigger element - viewport
-        start: "top center",
-        end: "bottom top",
-        // scrub: 0
-        once: true,
+        trigger: ".shr_scrolltrigger1",
+        // TOGGLE ACTIONS ORDER
+        // element enters view from screen bottom
+        // element exits view from screen top
+        // element re-enters view from screen top
+        // element re-exits view from screen bottom
+        toggleActions: "restart pause resume reset"
       }
     });
+    // let tl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: triggerElement,
+    //     // trigger element - viewport
+    //     start: "top center",
+    //     end: "bottom top",
+    //     // scrub: 0
+    //     once: true,
+    //   }
+    // });
 
-    tl.fromTo(targetElement, {
+    scrollTrigger1TL.fromTo(targetElement, {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
@@ -641,7 +652,7 @@ $(document).ready(function () {
       ease: "expo.out",
     });
     
-    tl.fromTo(prescreenerIcon, {
+    scrollTrigger1TL.fromTo(prescreenerIcon, {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
@@ -655,7 +666,7 @@ $(document).ready(function () {
       ease: "expo.out",
     });
     
-    tl.fromTo(prescreenerIcon, {
+    scrollTrigger1TL.fromTo(prescreenerIcon, {
       transformOrign: '0% 0%',
       rotation: 0
     },
@@ -667,7 +678,7 @@ $(document).ready(function () {
       
       }, "-=0.5");
     
-    tl.fromTo(heading, {
+    scrollTrigger1TL.fromTo(heading, {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
@@ -681,7 +692,7 @@ $(document).ready(function () {
       ease: "expo.out",
       });
     
-    tl.fromTo(paragraph, {
+    scrollTrigger1TL.fromTo(paragraph, {
       opacity: 0,
       visibility: "hidden",
       y: "100px",
@@ -694,8 +705,10 @@ $(document).ready(function () {
       duration: 1,
       ease: "expo.out",
     });
+  }
+  shrScrolltrigger1();
 
-  });
+
 
   
 
