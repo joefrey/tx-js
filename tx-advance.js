@@ -607,21 +607,14 @@ $(document).ready(function () {
     }
   };
 
-  $(".tx2-two__col").each(function (index) {
+  $(".shr_scrollTrigger1").each(function (index) {
     let triggerElement = $(this);
-    let targetElement = $(".shr_spaceship_outerspace, .shr_astronaut, .shr_iphone_notifications");
+    let targetElement = $(".shr_spaceship_outerspace");
 
-    // let astronautImg = $(".shr_astronaut");
-    // let phoneImg = $(".shr_iphone_notifications");
 
     let prescreenerIcon = $(".shr_icon__prescreener");
     let heading = $('.tx2-shr__heading');
     let paragraph = $('.shr__paragraph');
-
-    let temperature = $('.shr__temperature');
-    let watch = $('.shr__smartwatch');
-    let notification = $('.shr__notification');
-    let inbox = $('.shr__inbox_open');
   
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -699,10 +692,129 @@ $(document).ready(function () {
       ease: "expo.out",
     });
 
-    
-    /*tl.from(prescreenerIcon, {
-      
-    })*/
   });
+
+  $(".shr_scrollTrigger2").each(function (index) {
+    let triggerElement = $(this);
+    let targetElement = $(".shr_astronaut");
+
+
+    let icon1 = $(".shr__temperature");
+    let icon2 = $(".shr__smartwatch");
+    let heading = $('.tx2-shr__heading');
+    let paragraph = $('.shr__paragraph');
+  
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top center",
+        end: "bottom top",
+        // scrub: 0
+        once: true,
+      }
+    });
+    tl.fromTo(targetElement, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    tl.fromTo(icon1, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    tl.fromTo(icon1, {
+      ransformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      ransformOrign: '0% 0%',
+      rotation: 5,
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    
+    // icon 2
+    tl.fromTo(icon2, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 3
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+    tl.fromTo(icon2, {
+      ransformOrign: '0% 0%',
+      rotation: 0
+    },
+    {
+      ransformOrign: '0% 0%',
+      rotation: "-5",
+      duration: 1,
+      ease: "expo.out",
+      
+      }, "-=0.5");
+    
+    
+    
+    tl.fromTo(heading, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+      });
+    
+    tl.fromTo(paragraph, {
+      opacity: 0,
+      visibility: "hidden",
+      y: "100px",
+      zIndex: 1
+    },
+    {
+      opacity: 1,
+      visibility: "visible",
+      y: 0,
+      duration: 1,
+      ease: "expo.out",
+    });
+
+  });
+
+
+  // let temperature = $('.shr__temperature');
+  // let watch = $('.shr__smartwatch');
+  // let notification = $('.shr__notification');
+  // let inbox = $('.shr__inbox_open');
   
 });
